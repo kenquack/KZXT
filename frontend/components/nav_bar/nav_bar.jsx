@@ -2,24 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavBar = ( {user, logout} ) => {
-    let welcome;
-    if (user) {
-        welcome = 
-            <div>
-                <h1>Welcome, `{user.email}`</h1>
-                <button onClick={logout}>Log Out</button>
-            </div>
-    } else {
-        welcome = 
-            <div>
-                <Link to='/signup'>Sign Up</Link>
-                <Link to='/login'>Log In</Link>
-            </div>
-    };
-
+   
     return(
-        <div>
-            {welcome}
+        <div className='nav-bar-container'>
+            <div className='nav-bar'>
+                <Link to='/' className='main-page-button'>NZXT</Link>
+                <ul className='nav-category-container'>
+                    <li className='nav-categories'>Gaming PCs</li>
+                    <li className='nav-categories'>Components</li>
+                    <li className='nav-categories'>Peripherals</li>
+                </ul>
+                <Link to='/login' className='loginButton'>Log In</Link>
+                <Link to='/' className='cartButton'>Cart</Link>
+            </div>
         </div>
 
     )

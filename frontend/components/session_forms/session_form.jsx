@@ -8,7 +8,7 @@ class SessionForm extends React.Component {
             email: "",
             password: ""
         };
-
+        this.loginDemo = this.loginDemo.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -17,6 +17,12 @@ class SessionForm extends React.Component {
             [field]: e.currentTarget.value
         })
     }
+
+    loginDemo(e){
+        e.preventDefault();
+        let demoUser = {email: "demo@demo.com", password: "demoPassword"};
+        this.props.loginDemo(demoUser);
+    };
 
     handleSubmit(e) {
         e.preventDefault();
@@ -33,12 +39,14 @@ class SessionForm extends React.Component {
         let header = this.props.formType;
         let link;
         let linkName;
+        let question;
         if (this.props.formType === 'signup') {
             link = '/login';
             linkName = 'Login'
         } else {
             link = '/signup';
-            linkName = 'SignUp'
+            linkName = 'SignUp';
+            question = 'Not a member?'
         };
 
         return (
@@ -60,7 +68,10 @@ class SessionForm extends React.Component {
                         />
                     </label>
                     <button>{this.props.formType}</button>
+                    <button className='demo' onClick={this.loginDemo}>Demo User</button>
                 </form>
+
+                {question}
                 <Link to={link}>{linkName}</Link>
             </div>
         )

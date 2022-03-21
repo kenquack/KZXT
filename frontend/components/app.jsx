@@ -4,13 +4,15 @@ import { AuthRoute } from "../util/route_util";
 import LoginFormContainer from "./session_forms/login_form_container";
 import SignUpFormContainer from "./session_forms/sign_up_form_container";
 import NavBarContainer from "./nav_bar/nav_bar_container";
+import Home from "./home/home";
 
 const App = () => (
     <div>
-        <h1>KZXT!!</h1>
+        
         <NavBarContainer />
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+        <Route component={Home} />
     </div>
 );
 

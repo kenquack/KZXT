@@ -2,7 +2,8 @@
   "name": "KZXT",
   "private": true,
   "scripts": {
-    "start": "webpack --watch --mode=development"
+    "start": "webpack --watch --mode=development",
+    "postinstall": "webpack"
   },
   "dependencies": {
     "@babel/core": "^7.17.8",
@@ -18,5 +19,9 @@
     "redux-thunk": "^2.4.1",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"
+  },
+  "engines": {
+    "node": "17.6.0",
+    "npm": "8.5.1"
   }
 }

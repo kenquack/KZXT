@@ -1,0 +1,48 @@
+.nav-bar-container {
+    background: grey;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    z-index: 1000;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-bar {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    padding-left: 35vh;
+}
+
+.nav-category-container {
+    justify-content: space-evenly;
+
+    display: flex;
+}
+
+.nav-categories {
+    padding-left: 5vh;
+}
+
+.loginButton {
+    position: relative;
+    left: 60vh;
+}
+
+.cartButton {
+    position: relative;
+    left: 65vh;
+}
+
+.main-page-button {
+    text-decoration: none;
+    color: white;
+}
+
+.home-photo {
+    position: absolute;
+    width: 100%;
+}
