@@ -10,3 +10,4 @@ User.destroy_all
 
 demoUser = User.create(email: 'demo@demo.com', password: 'demoPassword')
 user = User.create(email: 'test', password: 'password')
+product1 = Product.create(name: 'Test PC', description: 'it is nice!', category: 'computer', price: '10.99')

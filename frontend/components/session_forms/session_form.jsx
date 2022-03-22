@@ -22,17 +22,13 @@ class SessionForm extends React.Component {
         e.preventDefault();
         let demoUser = {email: "demo@demo.com", password: "demoPassword"};
         this.props.loginDemo(demoUser);
+        this.props.closeModal();
     };
 
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
-        //resets form
-        this.setState({
-            email: "",
-            password: ""
-        })
+        this.props.processForm(user).then(this.props.closeModal);
     }
 
     render() {
@@ -43,6 +39,7 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'signup') {
             link = '/login';
             linkName = 'Login'
+            question = 'Already a member?'
         } else {
             link = '/signup';
             linkName = 'SignUp';
@@ -72,7 +69,7 @@ class SessionForm extends React.Component {
                 </form>
 
                 {question}
-                <Link to={link}>{linkName}</Link>
+                {this.props.otherForm}
             </div>
         )
     }

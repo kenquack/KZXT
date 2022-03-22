@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NavBar = ( {user, logout} ) => {
+const NavBar = ( { openModal } ) => {
    
     return(
         <div className='nav-bar-container'>
@@ -12,7 +12,7 @@ const NavBar = ( {user, logout} ) => {
                     <li className='nav-categories'>Components</li>
                     <li className='nav-categories'>Peripherals</li>
                 </ul>
-                <Link to='/login' className='loginButton'>Log In</Link>
+                <button className="loginButton" onClick={() => openModal('login')}>Login</button>
                 <Link to='/' className='cartButton'>Cart</Link>
             </div>
         </div>
