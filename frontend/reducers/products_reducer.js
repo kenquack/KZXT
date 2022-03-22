@@ -3,7 +3,6 @@ import { RECEIVE_ALL_PRODUCTS, RECEIVE_PRODUCT } from '../actions/product_action
 const productsReducer = (state= {}, action) => {
     Object.freeze(state);
     const nextState = Object.assign({}, state);
-    console.log(action)
     switch(action.type) {
         case RECEIVE_ALL_PRODUCTS:
             return action.products;

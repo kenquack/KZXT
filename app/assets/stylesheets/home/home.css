@@ -25,6 +25,8 @@
 
 .nav-categories {
     padding-left: 5vh;
+    text-decoration: none;
+    color: white;
 }
 
 .loginButton {

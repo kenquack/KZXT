@@ -8,7 +8,9 @@ const NavBar = ( { openModal } ) => {
             <div className='nav-bar'>
                 <Link to='/' className='main-page-button'>NZXT</Link>
                 <ul className='nav-category-container'>
-                    <li className='nav-categories'>Gaming PCs</li>
+                    <li>
+                        <Link to='/products' className='nav-categories'>Gaming PCs</Link>
+                    </li>
                     <li className='nav-categories'>Components</li>
                     <li className='nav-categories'>Peripherals</li>
                 </ul>
