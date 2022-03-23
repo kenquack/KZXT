@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavBar = ( { openModal } ) => {
-   
     return(
         <div className='nav-bar-container'>
             <div className='nav-bar'>
@@ -18,7 +17,6 @@ const NavBar = ( { openModal } ) => {
                 <Link to='/' className='cartButton'>Cart</Link>
             </div>
         </div>
-
     )
 }
 
