@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -17,6 +18,22 @@ class SessionForm extends React.Component {
             [field]: e.currentTarget.value
         })
     }
+
+    renderErrors() {
+        if (this.props.errors.length !== 0) {
+            return (
+                <ul>
+                    {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                    ))}
+                </ul>
+            )
+        } else {
+            return null
+        }
+    };
 
     loginDemo(e){
         e.preventDefault();
@@ -50,6 +67,8 @@ class SessionForm extends React.Component {
             <div>
                 <h1>{header}</h1>
                 <form onSubmit={this.handleSubmit}>
+                    {this.renderErrors()}
+                    <br/>
                     <label>Email:
                         <input type="text"
                             value={this.state.email}
