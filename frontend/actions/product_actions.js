@@ -13,7 +13,7 @@ const receiveProduct = (product) => ({
     product
 });
 
-export const fetchAllProducts = () => dispatch => getAllProducts()
+export const fetchAllProducts = (filter) => dispatch => getAllProducts(filter)
     .then((products) => dispatch(receiveAllProducts(products)))
 
 export const fetchProduct = (id) => dispatch => getProduct(id)

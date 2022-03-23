@@ -1,18 +1,30 @@
 import React from 'react';
 import ProductIndexItem from './product_index_item';
 import { connect } from 'react-redux';
-import { fetchAllProducts } from '../../actions/product_actions'
+import { fetchAllProducts } from '../../actions/product_actions';
 
 class ProductIndex extends React.Component {
     constructor(props) {
         super(props);
+        console.log(props)
+        this.saveStateToLocalStorage = this.saveStateToLocalStorage.bind(this)
     }
 
-    componentDidMount(){
-        this.props.fetchAllProducts();
+    saveStateToLocalStorage() {
+        localStorage.setItem('filter', JSON.stringify(this.props.filter))
+    }
+
+    componentDidMount() {
+        let filter = localStorage.getItem('filter')
+        this.props.updateFilter('category', JSON.parse(filter).category)
+    }
+
+    componentWillUnmount() {
+        this.props.updateFilter('category', '')
     }
 
     render() {
+        if (!this.props.products) return null;
         return (
             <div>
                 {this.props.products.map(product => {
@@ -23,16 +35,4 @@ class ProductIndex extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        products: Object.values(state.entities.products),
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-        fetchAllProducts: () => dispatch(fetchAllProducts())
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ProductIndex);
+export default ProductIndex;

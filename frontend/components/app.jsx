@@ -6,7 +6,8 @@ import SignUpFormContainer from "./session_forms/sign_up_form_container";
 import NavBarContainer from "./nav_bar/nav_bar_container";
 import Home from "./home/home";
 import Modal from "./modal/modal";
-import ProductIndex from '../components/products/product_index'
+import ProductIndex from '../components/products/product_index';
+import SearchContainer from './products/search_container'
 
 const App = () => (
     <div>
@@ -16,7 +17,7 @@ const App = () => (
         <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-        <Route exact path="/products" component={ProductIndex} />
+        <Route exact path="/products" component={SearchContainer} />
         <Route path="/" component={Home} />
         </Switch>
     </div>
