@@ -7,11 +7,13 @@ import NavBarContainer from "./nav_bar/nav_bar_container";
 import Home from "./home/home";
 import Modal from "./modal/modal";
 import ProductIndex from '../components/products/product_index';
-import SearchContainer from './products/search_container'
+import SearchContainer from './products/search_container';
+import Slideshow from './nav_bar/slide_bar'
 
 const App = () => (
     <div>
         <Modal />
+        <Slideshow />
         <NavBarContainer />
         
         <Switch>

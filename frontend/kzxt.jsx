@@ -5,11 +5,6 @@ import configureStore from './store/store'
 
 document.addEventListener("DOMContentLoaded", () => {
     let store = configureStore();
-    let filter = localStorage.getItem('filter');
-
-    if (!filter) {
-        localStorage.setItem('filter', JSON.stringify({ 'category': '' }))
-    }
 
     if (window.currentUser) {
             const preloadedState = {

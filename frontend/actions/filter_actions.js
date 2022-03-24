@@ -12,6 +12,5 @@ export const changeFilter = (filter, value) => {
 
 export const updateFilter = (filter, value) => (dispatch, getState) => {
     dispatch(changeFilter(filter, value));
-    localStorage.setItem('filter', JSON.stringify({"category": value}))
     return fetchAllProducts(getState().ui.filters)(dispatch);
 };

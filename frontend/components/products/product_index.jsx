@@ -6,16 +6,10 @@ import { fetchAllProducts } from '../../actions/product_actions';
 class ProductIndex extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props)
-        this.saveStateToLocalStorage = this.saveStateToLocalStorage.bind(this)
-    }
-
-    saveStateToLocalStorage() {
-        localStorage.setItem('filter', JSON.stringify(this.props.filter))
     }
 
     componentDidMount() {
-        let filter = localStorage.getItem('filter')
+        let filter = JSON.stringify(this.props.filter)
         this.props.updateFilter('category', JSON.parse(filter).category)
     }
 

@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('Futura-Light.otf');
+}
+
+@-webkit-keyframes colors {
+    0% {background-color: rgb(4, 147, 99);}
+    50% {background-color: rgb(4, 147, 99);}
+    51% {background-color: rgb(138, 0, 252);}
+    100% {background-color: rgb(138, 0, 252);}
+}
+
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    max-height: 55px;
+    /* -webkit-animation:colors 8s infinite; */
+    background: rgb(138, 0, 252);
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+}
+  
+.slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+    position: relative;
+    left: 40vw;
+}
+  
+.slide {
+    display: inline-block;
+    height: 400px;
+    width: 100%;
+}
+
+.messages {
+    color: white;
+    margin-top: 1.3vh;
+    font-family: 'Gotham';
+    font-weight: bold;
+}
