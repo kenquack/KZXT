@@ -62,77 +62,80 @@ computer4 = Product.create(
 file4 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Gaming+PC/streamer-pc.jpg")
 computer4.photo.attach(io:file4, filename:"streamer-pc")
 
-#H1
+#krakenz73rgb
 
 component1 = Product.create(
-    name: 'H1', 
-    description: 'The H1 allows you to get the most out of a small package. Pre-routed cables, a 750W PSU, support for the latest GPUs, and PCIe Gen 4 make the build powerful and simple.', 
+    name: 'Kraken Z73 RGB', 
+    description: "This All-in-One (AIO) liquid cooler is designed with the ability to fit comfortably in most cases. Show CPU/GPU temperatures or customize with GIFs with the Kraken Z LCD display.", 
     category: 'Component', 
-    price: '399.99'
+    price: '304.99'
 )
 
-file5 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/H1.jpg")
-component1.photo.attach(io:file5, filename:"H1")
+file5 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/krakenz73.jpg")
+component1.photo.attach(io:file5, filename:"krakenz73")
 
-#Kraken
+#krakenz73norgb
 
 component2 = Product.create(
-    name: 'Kraken X73 RGB', 
-    description: 'This All-in-One (AIO) liquid cooler is designed for full and mid-tower cases with support for 360mm radiator mounting and includes three 120mm Aer RGB fans.', 
+    name: 'Kraken Z73', 
+    description: 'This All-in-One (AIO) liquid cooler delivers the highest cooling potential of any Kraken. Show CPU/GPU temperatures or customize with GIFs with the Kraken Z LCD display.', 
     category: 'Component', 
-    price: '224.99'
+    price: '284.99'
 )
 
-file6 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/kraken.jpg")
-component2.photo.attach(io:file6, filename:"kraken")
+file6 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/krakenz73norgb.jpg")
+component2.photo.attach(io:file6, filename:"krakenz73norgb")
 
-#N7 Z590
+#krakenz63
 
 component3 = Product.create(
-    name: 'N7 Z590', 
-    description: 'This motherboard enables a visually seamless backdrop for any build with all the features of the new Intel Z590 chipset.', 
+    name: 'Kraken Z63 RGB', 
+    description: 'This All-in-One (AIO) liquid cooler is designed with the ability to fit comfortably in most cases. Show CPU/GPU temperatures or customize with GIFs with the Kraken Z LCD display.', 
     category: 'Component', 
-    price: '279.99'
+    price: '274.99'
 )
 
-file7 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/mobo.jpg")
-component3.photo.attach(io:file7, filename:"mobo")
+file7 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/krakenz63.jpg")
+component3.photo.attach(io:file7, filename:"krakenz63")
 
-#function
+#krakenz63norgb
 
-peripheral1 = Product.create(
-    name: 'Function', 
-    description: 'For those who desire a full-size keyboard without a large footprint, the NZXT Function Full Keyboard packs 104 keys into the sleekest form possible.', 
-    category: 'Peripheral', 
-    price: '149.99'
+component4 = Product.create(
+    name: 'Kraken Z63', 
+    description: 'his All-in-One (AIO) liquid cooler delivers the highest cooling potential of any Kraken. Show CPU/GPU temperatures or customize with GIFs with the Kraken Z LCD display.', 
+    category: 'Component', 
+    price: '254.99'
 )
 
-file8 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Peripherals/function.jpg")
-peripheral1.photo.attach(io:file8, filename:"function")
+file8 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/krakenz63norgb.jpg")
+component4.photo.attach(io:file8, filename:"krakenz63norgb")
 
-#lift
 
-peripheral2 = Product.create(
-    name: 'Lift', 
-    description: 'Lightweight design and low-drag cable enable quick movement, while high-end optical sensor gives you accurate in-game performance.', 
-    category: 'Peripheral', 
-    price: '59.99'
-)
 
-file9 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Peripherals/lift.jpg")
-peripheral2.photo.attach(io:file9, filename:"lift")
 
 #capsule
 
-peripheral3 = Product.create(
+peripheral1 = Product.create(
     name: 'Capsule', 
     description: 'Get single-source audio designed specifically for gaming with a simple, plug-and-play setup.', 
     category: 'Peripheral', 
     price: '129.99'
 )
 
-file10 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Peripherals/capsule.jpg")
-peripheral3.photo.attach(io:file10, filename:"capsule")
+file8 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Peripherals/capsule.jpg")
+peripheral1.photo.attach(io:file8, filename:"capsule")
+
+#boom arm
+
+peripheral2 = Product.create(
+    name: 'Boom Arm', 
+    description: 'The Boom Arm fits into any setup seamlessly. Smooth moving arms make adjusting simple while hidden cable management neatly organizes USB and XLR cables. Game uninterrupted with hidden springs providing quiet operation.', 
+    category: 'Peripheral', 
+    price: '99.99'
+)
+
+file9 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Peripherals/boomarm.jpg")
+peripheral2.photo.attach(io:file9, filename:"boomarm")
 
 
 

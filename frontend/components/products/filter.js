@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductIndex from './product_index';
 
+
 const Filter = ({products, fetchAllProducts, changeFilter, filter, updateFilter}) => {
     return (
         <div>
