@@ -1,9 +1,12 @@
+/* header */
+
 @font-face {
     font-family: 'Gotham-Bold';
     src: url('Gotham-Bold.otf');
 }
 
 .index-footer-photo {
+    padding-top: 5vh;
     width: 100%;
     height: 50vh;
     object-fit: cover;
@@ -18,12 +21,12 @@
 }
 
 .index-header {
-    width: 27vw;
+    width: 29vw;
     padding-top: 15vh;
     font-family: 'Gotham-Bold';
     /* font-weight: bold; */
     display: relative;
-    padding-left: 1vw;
+    padding-left: 2vw;
     margin-left: 33vw;
     padding-bottom: 2vh;
     font-size: 5.5vh;
@@ -66,4 +69,40 @@ p[id='Gaming PC-message'] {
     font-family: 'Gotham';
     font-weight: bolder;
     color: rgb(49, 50, 52);
+}
+
+/* body */
+
+.index-product-photo {
+    padding-left: 2vw;
+    width: 15vw;
+    border: 1px solid rgb(221, 220, 231);
+}
+
+.index-container {
+    margin-top: 10vh;
+    margin-left: 42vw;
+    width: 50vw;
+}
+
+.index-product {
+    padding-bottom: 3vh;
+    display: relative;
+    /* background: red; */
+    float: left;
+    width: 35%;
+}
+
+.product-index-name {
+    font-family: 'Gotham-Bold';
+    font-size: 20px;
+    color: rgb(49, 50, 52);
+    padding-bottom: 14px;
+}
+
+.product-index-price {
+    font-family: 'Gotham';
+    font-size: 16px;
+    color: rgb(49, 50, 52);
+    font-weight: bold;
 }

@@ -45,9 +45,12 @@ class ProductIndex extends React.Component {
                 <h2 className='index-header'>{header}</h2>
                 <p id={`${this.props.filter.category}-message`}>{message}</p>
                 <img src={headerPic} className='index-header-photo'/>
-                {this.props.products.map(product => {
-                    return <ProductIndexItem product={product} key={product.id} />
-                })}
+                <div className='index-container'>
+                    {this.props.products.map(product => {
+                        return <ProductIndexItem product={product} key={product.id} />
+                    })}
+
+                </div>
                 <img src={footerPic} className='index-footer-photo'/>
             </div>
         )

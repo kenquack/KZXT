@@ -3,10 +3,12 @@ import { fetchAllProducts } from '../../actions/product_actions';
 import { changeFilter, updateFilter } from '../../actions/filter_actions';
 import Filter from './filter';
 
-const mapStateToProps = (state) => ({
-    products: Object.values(state.entities.products),
-    filter: state.ui.filters
-});
+const mapStateToProps = (state) => {
+    return {
+        products: Object.values(state.entities.products),
+        filter: state.ui.filters
+    }
+};
 
 const mapDispatchToProps = dispatch => ({
     fetchAllProducts: (filter) => dispatch(fetchAllProducts(filter)),
