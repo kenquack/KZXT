@@ -1,7 +1,5 @@
 import React from 'react';
 import ProductIndexItem from './product_index_item';
-import { connect } from 'react-redux';
-import { fetchAllProducts } from '../../actions/product_actions';
 
 class ProductIndex extends React.Component {
     constructor(props) {
