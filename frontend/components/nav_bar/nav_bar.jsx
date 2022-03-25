@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
-import { FiUser } from 'react-icons/fi'
+import { FiUser, FiShoppingCart, FiSearch } from 'react-icons/fi'
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -47,8 +47,9 @@ class NavBar extends React.Component {
                     </li>
 
                 </ul>
-                <button className="loginButton" onClick={() => this.props.openModal('login')}>< FiUser /></button>
-                <Link to='/' className='cartButton'>Cart</Link>
+                <Link to='/' className='searchButton'>< FiSearch size='28px'/></Link>
+                <button className="loginButton" onClick={() => this.props.openModal('login')}>< FiUser size='30px'/></button>
+                <Link to='/' className='cartButton'>< FiShoppingCart size='28px'/></Link>
             </div>
         </div>
         )
