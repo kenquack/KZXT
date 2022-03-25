@@ -44,14 +44,16 @@ class ProductIndex extends React.Component {
             <div className='index-page'>
                 <h2 className='index-header'>{header}</h2>
                 <p id={`${this.props.filter.category}-message`}>{message}</p>
-                <img src={headerPic} className='index-header-photo'/>
+                {/* <img src={headerPic} className='index-header-photo'/> */}
+                <img src='https://media.npr.org/assets/img/2021/08/11/gettyimages-1279899488_wide-f3860ceb0ef19643c335cb34df3fa1de166e2761-s1100-c50.jpg' className='index-header-photo'/>
                 <div className='index-container'>
                     {this.props.products.map(product => {
                         return <ProductIndexItem product={product} key={product.id} />
                     })}
 
                 </div>
-                <img src={footerPic} className='index-footer-photo'/>
+                {/* <img src={footerPic} className='index-footer-photo'/> */}
+                <img src='https://icatcare.org/app/uploads/2018/07/Elderly-cats.png' className='index-footer-photo'/>
             </div>
         )
     }

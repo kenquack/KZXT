@@ -23,8 +23,8 @@ computer1 = Product.create(
     price: '799.99'
 )
 
-file1 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Gaming+PC/foundation-pc.jpg")
-computer1.photo.attach(io:file1, filename:"foundation-pc")
+# file1 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Gaming+PC/foundation-pc.jpg")
+# computer1.photo.attach(io:file1, filename:"foundation-pc")
 
 #starter PC
 
@@ -35,8 +35,8 @@ computer2 = Product.create(
     price: '1099.99'
 )
 
-file2 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Gaming+PC/starter-pc.jpg")
-computer2.photo.attach(io:file2, filename:"starter-pc")
+# file2 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Gaming+PC/starter-pc.jpg")
+# computer2.photo.attach(io:file2, filename:"starter-pc")
 
 #creator PC
 
@@ -47,8 +47,8 @@ computer3 = Product.create(
     price: '3999.99'
 )
 
-file3 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Gaming+PC/creator-pc.jpg")
-computer3.photo.attach(io:file3, filename:"creator-pc")
+# file3 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Gaming+PC/creator-pc.jpg")
+# computer3.photo.attach(io:file3, filename:"creator-pc")
 
 #streamer PC
 
@@ -59,8 +59,8 @@ computer4 = Product.create(
     price: '1799.99'
 )
 
-file4 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Gaming+PC/streamer-pc.jpg")
-computer4.photo.attach(io:file4, filename:"streamer-pc")
+# file4 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Gaming+PC/streamer-pc.jpg")
+# computer4.photo.attach(io:file4, filename:"streamer-pc")
 
 #krakenz73rgb
 
@@ -71,8 +71,8 @@ component1 = Product.create(
     price: '304.99'
 )
 
-file5 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/krakenz73.jpg")
-component1.photo.attach(io:file5, filename:"krakenz73")
+# file5 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/krakenz73.jpg")
+# component1.photo.attach(io:file5, filename:"krakenz73")
 
 #krakenz73norgb
 
@@ -83,8 +83,8 @@ component2 = Product.create(
     price: '284.99'
 )
 
-file6 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/krakenz73norgb.jpg")
-component2.photo.attach(io:file6, filename:"krakenz73norgb")
+# file6 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/krakenz73norgb.jpg")
+# component2.photo.attach(io:file6, filename:"krakenz73norgb")
 
 #krakenz63
 
@@ -95,8 +95,8 @@ component3 = Product.create(
     price: '274.99'
 )
 
-file7 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/krakenz63.jpg")
-component3.photo.attach(io:file7, filename:"krakenz63")
+# file7 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/krakenz63.jpg")
+# component3.photo.attach(io:file7, filename:"krakenz63")
 
 #krakenz63norgb
 
@@ -107,11 +107,8 @@ component4 = Product.create(
     price: '254.99'
 )
 
-file8 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/krakenz63norgb.jpg")
-component4.photo.attach(io:file8, filename:"krakenz63norgb")
-
-
-
+# file8 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Components/krakenz63norgb.jpg")
+# component4.photo.attach(io:file8, filename:"krakenz63norgb")
 
 #capsule
 
@@ -122,8 +119,8 @@ peripheral1 = Product.create(
     price: '129.99'
 )
 
-file8 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Peripherals/capsule.jpg")
-peripheral1.photo.attach(io:file8, filename:"capsule")
+# file9 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Peripherals/capsule.jpg")
+# peripheral1.photo.attach(io:file9, filename:"capsule")
 
 #boom arm
 
@@ -134,9 +131,5 @@ peripheral2 = Product.create(
     price: '99.99'
 )
 
-file9 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Peripherals/boomarm.jpg")
-peripheral2.photo.attach(io:file9, filename:"boomarm")
-
-
-
-
+# file10 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Peripherals/boomarm.jpg")
+# peripheral2.photo.attach(io:file10, filename:"boomarm")

@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
+import { FiUser } from 'react-icons/fi'
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -46,7 +47,7 @@ class NavBar extends React.Component {
                     </li>
 
                 </ul>
-                <button className="loginButton" onClick={() => this.props.openModal('login')}>Login</button>
+                <button className="loginButton" onClick={() => this.props.openModal('login')}>< FiUser /></button>
                 <Link to='/' className='cartButton'>Cart</Link>
             </div>
         </div>

@@ -45,45 +45,49 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        let header = this.props.formType;
         let link;
         let linkName;
         let question;
         if (this.props.formType === 'signup') {
             link = '/login';
-            linkName = 'Login'
+            linkName = 'Sign Up'
             question = 'Already a member?'
         } else {
             link = '/signup';
-            linkName = 'SignUp';
+            linkName = 'Sign In';
             question = 'Not a member?'
         };
 
         return (
-            <div>
-                <h1>{header}</h1>
-                <form onSubmit={this.handleSubmit}>
+            <div className="login-form-container">
+                <form onSubmit={this.handleSubmit} className='login-form-box'>
+                    <img src={window.logoblkURL} id='login-logo'/>
                     {this.renderErrors()}
                     <br/>
-                    <label>Email:
-                        <input type="text"
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                        />
-                    </label>
-                    <br/>
-                    <br/>
-                    <label>Password:
-                        <input type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                        />
-                    </label>
-                    <button>{this.props.formType}</button>
-                    <button className='demo' onClick={this.loginDemo}>Demo User</button>
+                    <div className="login-form">
+                        <label>Email Address <br/>
+                            <input type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
+                            />
+                        </label>
+                        <br/>
+                        <br/>
+                        <label>Password <br/>
+                            <input type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                            />
+                        </label>
+                        <br/>
+                        <button className="session-submit">{linkName}</button>
+                        <br/>
+                        <button className='demo' onClick={this.loginDemo}>Demo User</button>
+                    </div>
                 </form>
 
                 {question}
+                
                 {this.props.otherForm}
             </div>
         )

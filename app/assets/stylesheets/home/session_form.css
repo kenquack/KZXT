@@ -1,0 +1,33 @@
+.login-form-container {
+    font-family: 'Gotham';
+}
+
+#login-logo {
+    height: 3vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.session-submit {
+    width: 10.3vw;
+    padding: 10px;
+    text-transform: capitalize;
+    color: white;
+    background: rgb(138, 0, 252);
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-family: 'Gotham';
+}
+
+input {
+    margin-top: 10px;
+    height: 28px;
+    width: 10vw;
+    border: 1px solid rgb(209, 213, 219) ;
+    border-radius: 5px;
+    /* border-color: red; */
+}
