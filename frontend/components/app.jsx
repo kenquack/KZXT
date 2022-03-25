@@ -6,9 +6,9 @@ import SignUpFormContainer from "./session_forms/sign_up_form_container";
 import NavBarContainer from "./nav_bar/nav_bar_container";
 import Home from "./home/home";
 import Modal from "./modal/modal";
-import ProductIndex from '../components/products/product_index';
 import SearchContainer from './products/search_container';
-import Slideshow from './nav_bar/slide_bar'
+import Slideshow from './nav_bar/slide_bar';
+import ProductShowContainer from './products/product_show_container';
 
 const App = () => (
     <div>
@@ -17,10 +17,11 @@ const App = () => (
         <NavBarContainer />
         
         <Switch>
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-        <Route exact path="/products" component={SearchContainer} />
-        <Route path="/" component={Home} />
+            <AuthRoute exact path="/login" component={LoginFormContainer} />
+            <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+            <Route path='/products/:id' component={ProductShowContainer} />
+            <Route path="/products" component={SearchContainer} />
+            <Route path="/" component={Home} />
         </Switch>
     </div>
 );
