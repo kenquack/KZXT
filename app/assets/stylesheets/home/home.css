@@ -44,24 +44,12 @@
 
 .loginButton {
     position: relative;
-    left: 63vh;
-    background-color: Transparent;
-    border-style: none;
-    color: white;
+    left: 60vh;
 }
 
 .cartButton {
     position: relative;
-    left: 64vh;
-    top: 0.30vh;
-    color: white;
-}
-
-.searchButton {
-    position: relative;
-    left: 62vh;
-    top: 0.25vh;
-    color: white;
+    left: 65vh;
 }
 
 .main-page-button {
