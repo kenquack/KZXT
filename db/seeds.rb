@@ -9,6 +9,7 @@ require 'open-uri'
 
 User.destroy_all
 Product.destroy_all
+CartItem.destroy_all
 
 demoUser = User.create(email: 'demo@demo.com', password: 'demoPassword')
 user = User.create(email: 'test', password: 'password')

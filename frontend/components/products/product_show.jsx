@@ -3,10 +3,19 @@ import React from 'react';
 class ProductShow extends React.Component {
     constructor(props) {
         super(props)
+
+        this.state = {
+            quantity: 1,
+        }
     }
 
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.id);
+    }
+
+    addToCart(e) {
+        e.preventDefault();
+        this.props.createCartItem(this.props.currentUser.id, this.props.product.id, this.state.quantity);
     }
 
     render() {
@@ -23,7 +32,7 @@ class ProductShow extends React.Component {
                 <span>{product.description}</span>
                 <h3>Buy</h3>
                 <div>
-                    <span>Quantity</span>                                       
+                    <span>QTY</span>                                       
                     <select>   
                         <option value={1}>1</option>
                         <option value={2}>2</option>
@@ -33,7 +42,7 @@ class ProductShow extends React.Component {
                         <option value={6}>6</option>
                     </select>
                 </div>              
-                <button id='addCart'>Add to Cart</button>
+                <button onClick={(e) => this.addToCart(e)} id='addCart'>Add to Cart</button>
             </div>
         )
     }

@@ -44,12 +44,21 @@
 
 .loginButton {
     position: relative;
-    left: 60vh;
+    left: 63vh;
+    color: white;
 }
 
 .cartButton {
     position: relative;
-    left: 65vh;
+    left: 64vh;
+    color: white;
+    top: 0.4vh;
+}
+
+.searchButton {
+    position: relative;
+    left: 62vh;
+    color: white;
 }
 
 .main-page-button {
@@ -64,5 +73,14 @@
 .home-photo {
     position: absolute;
     width: 100%;
+}
+
+button {
+    background: transparent;
+    border-style: none;
+}
+
+button:hover {
+    cursor: pointer;
 }
 

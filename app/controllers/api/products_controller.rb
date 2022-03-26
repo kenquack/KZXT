@@ -1,13 +1,20 @@
 class Api::ProductsController < ApplicationController
 
     def index
-        # @products = Product.all
-        # render 'api/products/index'
-        if (params[:filter][:category] != "")
+        if params[:filter] == nil || params[:filter][:category] == nil
+            @products = Product.all
+        elsif params[:filter][:category] != ""
             @products = Product.where(category: params[:filter][:category])
         else
             @products = Product.all
         end
+        
+        # if (params[:filter][:category] != "")
+        #     @products = Product.where(category: params[:filter][:category])
+        # else
+        #     @products = Product.all
+        # end
+        
         render 'api/products/index'
     end
 
