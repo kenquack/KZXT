@@ -11,6 +11,11 @@ class Api::ProductsController < ApplicationController
         render 'api/products/index'
     end
 
+    def show
+        @product = Product.find_by(id: params[:id])
+        render 'api/products/show'
+    end
+
     def product_params
         params.require(:product).permit(:name, :description, :category, :price)
     end

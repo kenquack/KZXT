@@ -6,7 +6,7 @@ class ProductShow extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchProduct(this.props.productId);
+        this.props.fetchProduct(this.props.match.params.id);
     }
 
     render() {
