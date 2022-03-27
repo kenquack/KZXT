@@ -8,6 +8,8 @@ class CartItem extends React.Component {
     render() {
         const product = this.props.products[this.props.cartItem.productId - 1];
         const cartItem = this.props.cartItem;
+        
+        if (!product) return null;
 
         return (
             <div className='cartItem'>
