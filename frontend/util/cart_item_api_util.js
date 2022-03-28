@@ -11,6 +11,18 @@ export const fetchCartItem = (cartItemId) => {
         url: `/api/cart_items/${cartItemId}`
     })
 };
+
+export const editCartItem = (cartItem, quantity) => {
+    let id = cartItem.id
+    return $.ajax({
+        method: "PATCH",
+        url: `/api/cart_items/${cartItem.id}`,
+        data: { 
+            id, 
+            quantity
+        }
+    })
+}
   
 export const createCartItem = (userId, productId, quantity) => (
     $.ajax({

@@ -11,10 +11,6 @@ function Modal({modal, closeModal}) {
     return null;
   }
 
-  if (modal) {
-    let body = document.getElementById
-  }
-
   let component;
   switch (modal) {
     case 'login':

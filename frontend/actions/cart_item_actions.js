@@ -38,3 +38,8 @@ export const deleteCartItem = cartItemId => dispatch => (
     APIUtil.deleteCartItem(cartItemId)
         .then(cartItem => dispatch(removeCartItem(cartItem)))
 )
+
+export const editCartItem = (cartItem, quantity) => dispatch => (
+    APIUtil.editCartItem(cartItem, quantity)
+        .then(cartItem => dispatch(receiveCartItem(cartItem)))
+)

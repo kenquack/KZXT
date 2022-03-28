@@ -9,6 +9,16 @@ class Api::CartItemsController < ApplicationController
         @cart_item = CartItem.find_by(id: params[:id])
         render :show
     end
+
+    def update
+        @cart_item = CartItem.find_by(id: params[:id])
+        
+        if @cart_item.update!(:quantity => params[:quantity])
+            render :show
+        else
+            render json: @cart_item.errors.full_messages, status: 422
+        end
+    end
       
     def create
         @cart_item = CartItem.new(cart_item_params)

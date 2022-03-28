@@ -4,11 +4,9 @@ import { FaTrashAlt } from 'react-icons/fa'
 class CartItem extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
-            quantity: this.props.cartItem.quantity
+            quantity: this.props.cartItem.quantity,
         }
-    
         this.deleteItem = this.deleteItem.bind(this)
     }
 
@@ -17,14 +15,19 @@ class CartItem extends React.Component {
         this.setState({quantity: 0})
     }
 
+    componentWillUnmount() {
+        const product = this.props.cartItem
+        this.props.editCartItem(product, this.state.quantity)
+    }
+
     adjustQuantity(type) {
         switch(type) {
             case 'increase':
                 this.setState({quantity: this.state.quantity + 1});
                 break;
             case 'decrease':
-                this.setState({quantity: this.state.quantity - 1});
-                break;
+                this.setState({totalItem: this.state.totalItem - 1});
+            break;
         }
     }
 
@@ -41,7 +44,7 @@ class CartItem extends React.Component {
                 <div>
                     <img src={window.catURL} className='cart-product-photo'/>
                 </div>
-
+                
                 <div className='cartDes'>
                     <div id='cartName'>
                         {product.name}
