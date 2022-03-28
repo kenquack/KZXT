@@ -3,7 +3,7 @@ import React from 'react';
 const Slideshow = () => {
     let colors = ["#8A00FC", "#8A00FC", "#8A00FC", "#8A00FC"];
     let messages = [
-        "Introducing the NZXT Function Keyboard and Lift Mouse.", 
+        "Introducing the KZXT Function Keyboard and Lift Mouse.", 
         "The new H1 is here. Learn More >",
         "Gaming PCs will ship in 1 week!",
         "Free shipping over $25 (excluding BLD Gaming PCs)."

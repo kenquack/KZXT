@@ -1,0 +1,126 @@
+.cart-background {
+    position: fixed;
+    /* top: 8.05vh; */
+    top: 9.3vh;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1002;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+.cartWindow {
+    background: white;
+    position: absolute;
+    width: 25vw;
+    top: 2.7vh;
+    left: 75vw;
+}
+
+.cartItem {
+    margin-top: 2vh;
+    display: flex;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid rgb(221, 220, 231);
+}
+
+.cart-product-photo {
+    width: 4vw;
+}
+
+#cartHeader{
+    display: fixed;
+    top: 4vh;
+    left: 75vw;
+    height: 1vh;
+    width: 25vw;
+    position: fixed;
+    background: white;
+    padding: 3vh;
+    padding-bottom: 4vh;
+    border-bottom: 1px solid rgb(221, 220, 231);
+    z-index: 1000;
+
+}
+
+#cartTitle {
+    font-family: 'Gotham-Bold'; 
+    font-size: 2.5vh;
+    color: rgb (49, 50, 52);
+}
+
+#cartContainer {
+    padding-left: 1vw;
+}
+
+#cartAmount {
+    position: absolute;
+    font-size: 1.6vh;
+    left: 8vw;
+    top: 3.3vh;
+    color: rgb(49, 50, 52);
+}
+
+#cartClose {
+    position: absolute;
+    font-size: 18px;
+    left: 22vw;
+    top: 3vh;
+    /* background: red; */
+}
+
+.cartDes {
+    width: 50vw;
+    padding-left: 1vw;
+    
+}
+
+#cartName {
+    font-family: 'Gotham-Bold'; 
+    font-size: 2vh;
+    color: rgb (49, 50, 52);
+}
+
+#cartQuantity{
+    margin-top: 0.5vh;
+}
+
+.cartQuantityContainer {
+    margin-top: 2vh;
+    font-family: 'Gotham'; 
+    font-weight: bold;
+    display: flex;
+    border: 1px solid rgb(221, 220, 231);
+    border-radius: 10px;
+    width: 4.5vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    text-align: center;
+    float: left;
+}
+
+.cartQuantityContainer > button {
+    font-size: 20px;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.cartQuantityContainer > * {
+    margin-left: 0.4vw;
+}
+
+#cartPrice {
+    position: absolute;
+    margin-top: 4.3vh;
+    left: 21vw;
+    color: rgb(145, 145, 155);
+}
+
+#cartTrash {
+    position: absolute;
+    left: 22.3vw;
+    z-index: 1;
+}

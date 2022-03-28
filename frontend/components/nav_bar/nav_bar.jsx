@@ -27,6 +27,13 @@ class NavBar extends React.Component {
     }
 
     render() {
+        let cartButton;
+        if (this.props.currentUser) {
+            cartButton = <button className='cartButton' onClick={() => this.props.openModal('cart')}>< FiShoppingCart size='24px'/></button>
+        } else {
+            cartButton = <button className='cartButton' onClick={() => this.props.openModal('notLoggedIn')}>< FiShoppingCart size='24px'/></button>
+        }
+
         return(
             <div className='nav-bar-container'>
             <div className='nav-bar'>
@@ -49,7 +56,9 @@ class NavBar extends React.Component {
                 </ul>
                 <button className='searchButton'>< FiSearch size='25px'/></button>
                 <button className="loginButton" onClick={() => this.props.openModal('login')}>< FiUser size='25px'/></button>
-                <Link to='/cart_items' className='cartButton'>< FiShoppingCart size='24px'/></Link>
+                {/* <button className='cartButton' onClick={() => this.props.openModal('cart')}>< FiShoppingCart size='24px'/></button> */}
+                {cartButton}
+                <button onClick={() => this.props.logout()}>Logout</button>
             </div>
         </div>
         )

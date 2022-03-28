@@ -3,11 +3,18 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_forms/login_form_container';
 import SignupFormContainer from '../session_forms/sign_up_form_container';
+import CartItemContainer from '../cart_items/cart_item_container';
+import LoggedIn from '../nav_bar/require_logged_in';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
     return null;
   }
+
+  if (modal) {
+    let body = document.getElementById
+  }
+
   let component;
   switch (modal) {
     case 'login':
@@ -16,16 +23,32 @@ function Modal({modal, closeModal}) {
     case 'signup':
       component = <SignupFormContainer />;
       break;
+    case 'cart':
+      component = <CartItemContainer />;
+      break;
+    case 'notLoggedIn':
+      component = <LoggedIn />
+      break;
     default:
       return null;
   }
-  return (
-    <div className="modal-background" onClick={closeModal}>
-      <div className="modal-child" onClick={e => e.stopPropagation()}>
-        { component }
+  if (modal === 'cart') {
+    return (
+      <div className="cart-background" onClick={closeModal}>
+        <div className='cartWindow' onClick={e => e.stopPropagation()}>
+          {component}
+        </div>
       </div>
-    </div>
-  );
+    )
+  } else {
+    return (
+      <div className="modal-background" onClick={closeModal}>
+        <div className="modal-child" onClick={e => e.stopPropagation()}>
+          { component }
+        </div>
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = state => {

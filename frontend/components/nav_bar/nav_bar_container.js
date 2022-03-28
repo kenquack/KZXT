@@ -5,8 +5,10 @@ import { openModal } from '../../actions/modal_actions';
 import { changeFilter, updateFilter } from '../../actions/filter_actions'
 
 const mapStateToProps = (state) => {
+    let currentUser = state.entities.users[state.session.id]
     return {
-        filter: state.ui.filters
+        filter: state.ui.filters,
+        currentUser: currentUser,
     }
 };
 

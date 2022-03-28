@@ -9,7 +9,6 @@ import Modal from "./modal/modal";
 import SearchContainer from './products/search_container';
 import Slideshow from './nav_bar/slide_bar';
 import ProductShowContainer from './products/product_show_container';
-import CartItemContainer from "./cart_items/cart_item_container";
 
 const App = () => (
     <div>
@@ -22,7 +21,6 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <Route exact path='/products/:id' component={ProductShowContainer} />
             <Route exact path="/products" component={SearchContainer} />
-            <Route exact path='/cart_items' component={CartItemContainer} />
             <Route exact path="/" component={Home} />
             <Redirect to="/" />
         </Switch>
