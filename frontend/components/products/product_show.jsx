@@ -16,6 +16,7 @@ class ProductShow extends React.Component {
     addToCart(e) {
         e.preventDefault();
         this.props.createCartItem(this.props.currentUser.id, this.props.product.id, this.state.quantity);
+        //pass cart items through container, look through cart items for same product id, update product else create
     }
 
     render() {
@@ -27,9 +28,9 @@ class ProductShow extends React.Component {
                 {/* <img src={product.photoUrl} className='show-product-photo'/> */}
                 <img src={window.catURL} className='show-product-photo'/>
                 <h2>{product.name}</h2>
-                <span>{product.price}</span>
+                <div>{product.price}</div>
                 <br/>
-                <span>{product.description}</span>
+                <div>{product.description}</div>
                 <h3>Buy</h3>
                 <div>
                     <span>QTY</span>                                       

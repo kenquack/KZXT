@@ -5,6 +5,7 @@ import { MdClose } from 'react-icons/md'
 class CartItemIndex extends React.Component {
     constructor(props){
         super(props)
+        //set length as state so it autorenders?
     }
 
     componentDidMount() {
@@ -26,6 +27,12 @@ class CartItemIndex extends React.Component {
                 usersCart.push(this.props.cartItems[i])
             }
         }
+        let emptyCart;
+        if (usersCart.length === 0) {
+            emptyCart = (
+                <div id='empty'>yo cart empty</div>
+            )
+        }
         return (
             <div id='cartContainer'>
                 <div id='cartHeader'>
@@ -33,6 +40,7 @@ class CartItemIndex extends React.Component {
                     <div id='cartAmount'>({usersCart.length})</div>
                     <button onClick={() => this.props.closeModal()} id='cartClose'><MdClose size='24px'/></button>
                 </div>
+                {emptyCart}
                 <div className='cartItemContainer'>
                     {usersCart.map(cartItem => { 
                         return <CartItem key={cartItem.id} cartItem={cartItem} products={this.props.products} deleteCartItem={this.props.deleteCartItem}/>})}

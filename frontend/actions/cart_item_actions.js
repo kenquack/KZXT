@@ -14,9 +14,9 @@ const receiveCartItem = (cartItem) => ({
     cartItem
 });
 
-const removeCartItem = (cartItem) => ({
+const removeCartItem = (cartItemId) => ({
     type: REMOVE_CART_ITEM,
-    cartItem
+    cartItemId
 });
 
 export const fetchCartItems = () => dispatch => (

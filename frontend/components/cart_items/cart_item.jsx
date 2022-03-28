@@ -8,6 +8,13 @@ class CartItem extends React.Component {
         this.state = {
             quantity: this.props.cartItem.quantity
         }
+    
+        this.deleteItem = this.deleteItem.bind(this)
+    }
+
+    deleteItem() {
+        this.props.deleteCartItem(this.props.cartItem.id)
+        this.setState({quantity: 0})
     }
 
     adjustQuantity(type) {
@@ -24,6 +31,10 @@ class CartItem extends React.Component {
     render() {
         const product = this.props.products[this.props.cartItem.productId - 1];
         if (!product) return null;
+        if (this.state.quantity === 0) {
+            this.props.deleteCartItem(this.props.cartItem.id)
+            return null;
+        }
 
         return (
             <div className='cartItem'>
@@ -35,19 +46,18 @@ class CartItem extends React.Component {
                     <div id='cartName'>
                         {product.name}
                         <span>
-                            <button id='cartTrash'><FaTrashAlt size='18px'/></button>
+                            <button id='cartTrash' onClick={this.deleteItem}><FaTrashAlt size='18px'/></button>
                         </span>
                     </div>
 
                     <div>
                         <div className='cartQuantityContainer'>
                             <button onClick={() => this.adjustQuantity('decrease')}>-</button>
-                            <div id='cartQuantity'>
-                                {this.state.quantity}
-                            </div>
+                                <div id='cartQuantity'>
+                                    {this.state.quantity}
+                                </div>
                             <button onClick={() => this.adjustQuantity('increase')}>+</button>
                         </div>
-
                     </div>
 
                         <span id='cartPrice'>

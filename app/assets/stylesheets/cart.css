@@ -124,3 +124,7 @@
     left: 22.3vw;
     z-index: 1;
 }
+
+#empty {
+    height: 100vh;
+}
