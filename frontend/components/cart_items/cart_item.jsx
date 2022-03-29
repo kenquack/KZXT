@@ -15,29 +15,22 @@ class CartItem extends React.Component {
         this.setState({quantity: 0})
     }
 
-    componentWillUnmount() {
-        const product = this.props.cartItem
-        if (product) {
-            this.props.editCartItem(product, this.state.quantity)
-        }
-    }
-
     adjustQuantity(type) {
-        // const product = this.props.cartItem
+        const product = this.props.cartItem
         switch(type) {
             case 'increase':
                 this.setState({quantity: this.state.quantity + 1});
-                // this.props.editCartItem(product, this.state.quantity + 1)
+                this.props.editCartItem(product, this.state.quantity + 1)
                 break;
             case 'decrease':
                 this.setState({quantity: this.state.quantity - 1});
-                // this.props.editCartItem(product, this.state.quantity - 1)
+                this.props.editCartItem(product, this.state.quantity - 1)
                 break;
         }
     }
 
     render() {
-        const product = this.props.products[this.props.cartItem.productId - 1];
+        const product = this.props.products[this.props.cartItem.product_id - 1];
         if (!product) return null;
         if (this.state.quantity === 0) {
             this.props.deleteCartItem(this.props.cartItem.id)

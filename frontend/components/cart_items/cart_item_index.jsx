@@ -5,9 +5,6 @@ import { MdClose } from 'react-icons/md'
 class CartItemIndex extends React.Component {
     constructor(props){
         super(props)
-        this.state = {
-            quantity: 0
-        }
     }
 
     componentDidMount() {
@@ -20,18 +17,13 @@ class CartItemIndex extends React.Component {
         document.body.style.overflow = "visible";
     }
 
-    cartQuantity() {
-        this.setState(this.state.quantity + 1)
-    }
-
     render() {
         if (!this.props.cartItems) return null;
         if (!this.props) return null;
-
         let usersCart = [];
         let totalItems = 0;
         for (let i = 0; i < this.props.cartItems.length; i++) {
-            if (this.props.cartItems[i].userId === this.props.currentUser.id || this.props.cartItems[i].user_id === this.props.currentUser.id){
+            if (this.props.cartItems[i].user_id === this.props.currentUser.id){
                 totalItems += this.props.cartItems[i].quantity
                 usersCart.push(this.props.cartItems[i])
             }
@@ -47,11 +39,10 @@ class CartItemIndex extends React.Component {
         let totalCost = 0;
         for (let i = 0; i < usersCart.length; i++) {
             let cartItem = usersCart[i]
-            if (!this.props.products[cartItem.productId - 1]) return null;
-            let price = this.props.products[cartItem.productId - 1].price * cartItem.quantity
+            if (!this.props.products[cartItem.product_id - 1]) return null;
+            let price = this.props.products[cartItem.product_id - 1].price * cartItem.quantity
             totalCost += price
         }
-    
         return (
             <div id='cartContainer'>
                 <div id='cartHeader'>

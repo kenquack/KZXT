@@ -24,13 +24,13 @@ export const editCartItem = (cartItem, quantity) => {
     })
 }
   
-export const createCartItem = (userId, productId, quantity) => (
+export const createCartItem = (user_id, product_id, quantity) => (
     $.ajax({
         method: "POST",
         url: "/api/cart_items",
         data: { cart_item: {
-        user_id: userId,
-        product_id: productId,
+        user_id: user_id,
+        product_id: product_id,
         quantity: quantity
         } }
     })

@@ -18,7 +18,7 @@ const mapStateToProps = (state, {match}) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchProduct: (id) => dispatch(fetchProduct(id)),
-        createCartItem: (userId, productId, quantity) => dispatch(createCartItem(userId, productId, quantity)),
+        createCartItem: (user_id, product_id, quantity) => dispatch(createCartItem(user_id, product_id, quantity)),
         fetchCartItems: () => dispatch(fetchCartItems()),
         editCartItem: (cartItem, quantity) => dispatch(editCartItem(cartItem, quantity)),
         openModal: (modal) => dispatch(openModal(modal)),

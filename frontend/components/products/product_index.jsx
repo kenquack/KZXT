@@ -17,6 +17,7 @@ class ProductIndex extends React.Component {
     }
 
     render() {
+        window.scrollTo(0, 0); //brings to top of page
         if (!this.props.products) return null;
 
         let header;
