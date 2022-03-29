@@ -38,6 +38,13 @@ class ProductShow extends React.Component {
         if (!this.props.product) return null;
         const { product, currentUser } = this.props;
 
+        let cartButton;
+        if (!currentUser) {
+            cartButton = <button onClick={(e) => this.props.openModal('notLoggedIn')} id='addCart'>Add to Cart</button>
+        } else {
+            cartButton = <button onClick={(e) => this.addToCart(e)} id='addCart'>Add to Cart</button>
+        }
+
         return (
             <div>
                 {/* <img src={product.photoUrl} className='show-product-photo'/> */}
@@ -58,7 +65,7 @@ class ProductShow extends React.Component {
                         <option value={6}>6</option>
                     </select>
                 </div>              
-                <button onClick={(e) => this.addToCart(e)} id='addCart'>Add to Cart</button>
+                {cartButton}
             </div>
         )
     }

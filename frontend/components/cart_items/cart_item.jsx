@@ -23,13 +23,16 @@ class CartItem extends React.Component {
     }
 
     adjustQuantity(type) {
+        // const product = this.props.cartItem
         switch(type) {
             case 'increase':
                 this.setState({quantity: this.state.quantity + 1});
+                // this.props.editCartItem(product, this.state.quantity + 1)
                 break;
             case 'decrease':
                 this.setState({quantity: this.state.quantity - 1});
-            break;
+                // this.props.editCartItem(product, this.state.quantity - 1)
+                break;
         }
     }
 
@@ -40,7 +43,6 @@ class CartItem extends React.Component {
             this.props.deleteCartItem(this.props.cartItem.id)
             return null;
         }
-
         return (
             <div className='cartItem'>
                 <div>

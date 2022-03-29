@@ -31,7 +31,7 @@ class CartItemIndex extends React.Component {
         let usersCart = [];
         let totalItems = 0;
         for (let i = 0; i < this.props.cartItems.length; i++) {
-            if (this.props.cartItems[i].userId === this.props.currentUser.id){
+            if (this.props.cartItems[i].userId === this.props.currentUser.id || this.props.cartItems[i].user_id === this.props.currentUser.id){
                 totalItems += this.props.cartItems[i].quantity
                 usersCart.push(this.props.cartItems[i])
             }
@@ -56,7 +56,7 @@ class CartItemIndex extends React.Component {
             <div id='cartContainer'>
                 <div id='cartHeader'>
                     <h2 id='cartTitle'>Your Cart</h2> 
-                    {/* <div id='cartAmount'>({totalItems})</div> */}
+                    <div id='cartAmount'>({totalItems})</div>
                     <button onClick={() => this.props.closeModal()} id='cartClose'><MdClose size='24px'/></button>
                 </div>
 

@@ -10,7 +10,6 @@
 
 .nav-bar-container {
     font-family: 'Gotham';
-    /* font-family: 'Futura'; */
     background: rgb(49, 50, 52);
     display: flex;
     width: 100%;
@@ -45,20 +44,32 @@
 .loginButton {
     position: relative;
     left: 63vh;
+    top: 0.6vh;
     color: white;
+}
+
+#logContent {
+    margin-left: 40vh;
+    background: gray;
+    position: absolute;
+    left: 72vh;
+    width: 18vw;
+    padding: 0.5vw;
+    top: 6vh;
 }
 
 .cartButton {
     position: relative;
     left: 64vh;
     color: white;
-    top: 0.1vh;
+    top: 0.3vh;
 }
 
 .searchButton {
     position: relative;
     left: 62vh;
     color: white;
+    top: 0.3vh;
 }
 
 .main-page-button {
