@@ -12,6 +12,11 @@ class Api::CartItemsController < ApplicationController
 
     def update
         @cart_item = CartItem.find_by(id: params[:id])
+
+        if !@cart_item
+            render json: ['No item to update']
+            return
+        end
         
         if @cart_item.update!(:quantity => params[:quantity])
             render :show

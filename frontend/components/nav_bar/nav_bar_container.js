@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import NavBar from './nav_bar';
 import { logout } from '../../actions/session_actions';
-import { openModal } from '../../actions/modal_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 import { changeFilter, updateFilter } from '../../actions/filter_actions'
 
 const mapStateToProps = (state) => {
@@ -17,6 +17,7 @@ const mapDispatchToProps = (dispatch) => ({
     openModal: (modal) => dispatch(openModal(modal)),
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
     changeFilter: (filter, value) => dispatch(changeFilter(filter, value)),
+    closeModal: () => dispatch(closeModal())
 })
 
 

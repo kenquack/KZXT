@@ -37,7 +37,7 @@ class NavBar extends React.Component {
         return(
             <div className='nav-bar-container'>
             <div className='nav-bar'>
-                <Link to='/' className='main-page-button'>
+                <Link to='/' className='main-page-button' onClick={() => this.props.closeModal}>
                     <img src={window.logoURL} id='logo'/>
                 </Link>
                 <ul className='nav-category-container'>

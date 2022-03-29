@@ -24,12 +24,14 @@ class ProductShow extends React.Component {
         let cartItems = this.props.cartItems
         for (let i = 0; i < cartItems.length; i++) {
             if (cartItems[i].productId === this.props.product.id || cartItems[i].product_id === this.props.product.id) {
-                let newQuantity = this.state.quantity + cartItems[i].quantity
-                this.props.editCartItem(cartItems[i], newQuantity).then(() => this.props.openModal('cart'))
-                return;
+                if (cartItems[i].userId === this.props.currentUser.id) {
+                    let newQuantity = this.state.quantity + cartItems[i].quantity
+                    this.props.editCartItem(cartItems[i], newQuantity).then(() => this.props.openModal('cart'))
+                    return;
+                }
             }
         }
-        this.props.createCartItem(this.props.currentUser.id, this.props.product.id, this.state.quantity);
+        this.props.createCartItem(this.props.currentUser.id, this.props.product.id, this.state.quantity).then(() => this.props.openModal('cart'));
     }
 
     render() {

@@ -17,7 +17,9 @@ class CartItem extends React.Component {
 
     componentWillUnmount() {
         const product = this.props.cartItem
-        this.props.editCartItem(product, this.state.quantity)
+        if (product) {
+            this.props.editCartItem(product, this.state.quantity)
+        }
     }
 
     adjustQuantity(type) {
@@ -26,7 +28,7 @@ class CartItem extends React.Component {
                 this.setState({quantity: this.state.quantity + 1});
                 break;
             case 'decrease':
-                this.setState({totalItem: this.state.totalItem - 1});
+                this.setState({quantity: this.state.quantity - 1});
             break;
         }
     }
@@ -44,7 +46,7 @@ class CartItem extends React.Component {
                 <div>
                     <img src={window.catURL} className='cart-product-photo'/>
                 </div>
-                
+
                 <div className='cartDes'>
                     <div id='cartName'>
                         {product.name}
