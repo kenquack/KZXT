@@ -145,7 +145,7 @@ button:hover {
 
 .searchBar {
     position: absolute;
-    top: 5.2vh;
+    top: 9.3vh;
     height: 4.3vh;
     left: 0;
     background: rgb(73, 72, 81);
@@ -169,6 +169,40 @@ button:hover {
 .searchBar > span {
     padding-top: 3vh;
     margin-left: 20vw;
+}
+
+.searchWindow {
+    font-family: 'Gotham';
+    background: white;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-top: 7vw;
+    padding: 1vh;
+    border-radius: 10px;
+}
+
+.resultPic{
+    width: 3vw;
+}
+
+.resultProduct {
+    display: flex;
+    padding: 1vh;
+    border-top: 1px solid rgb(221, 220, 231);
+    width: 98%;
+    /* background: red; */
+    text-decoration: none;
+}
+
+.resultProduct:first-child {
+    border: none;
+}
+
+.resultProduct > h3 {
+    padding-left: 1vh;
+    font-size: 1.5vh;
+    font-weight: bold;
+    color: rgb(31, 41, 55);
 }
 
 

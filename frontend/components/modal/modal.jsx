@@ -5,12 +5,12 @@ import LoginFormContainer from '../session_forms/login_form_container';
 import SignupFormContainer from '../session_forms/sign_up_form_container';
 import CartItemContainer from '../cart_items/cart_item_container';
 import LoggedIn from '../nav_bar/require_logged_in';
+import SearchBar from '../nav_bar/search_bar_container';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
     return null;
   }
-
   let component;
   switch (modal) {
     case 'login':
@@ -23,11 +23,24 @@ function Modal({modal, closeModal}) {
       component = <CartItemContainer />;
       break;
     case 'notLoggedIn':
-      component = <LoggedIn />
+      component = <LoggedIn />;
+      break;
+    case 'search':
+      component = <SearchBar />;
       break;
     default:
       return null;
   }
+  if (modal === 'search') {
+    return (
+      <div className="modal-background" onClick={closeModal}>
+        <div className="searchWindow" onClick={e => e.stopPropagation()}>
+          { component }
+        </div>
+      </div>
+    )
+  }
+
   if (modal === 'cart') {
     return (
       <div className="cart-background" onClick={closeModal}>

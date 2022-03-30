@@ -7,9 +7,9 @@ class NavBar extends React.Component {
     constructor(props) {
         super(props)
         this.logContainer = React.createRef();
-        this.searchContainer = React.createRef();
+        // this.searchContainer = React.createRef();
         this.state = {
-            searchOpen: false,
+            // searchOpen: false,
             logOpen: false,
         };
 
@@ -34,11 +34,11 @@ class NavBar extends React.Component {
             });
         }
 
-        if (this.searchContainer.current && !this.searchContainer.current.contains(event.target)){
-            this.setState({
-                searchOpen: false,
-            });
-        }
+        // if (this.searchContainer.current && !this.searchContainer.current.contains(event.target)){
+        //     this.setState({
+        //         searchOpen: false,
+        //     });
+        // }
     };
 
     handleClick(category) {
@@ -56,11 +56,11 @@ class NavBar extends React.Component {
     dropDown(input) {
 
         switch(input){
-            case 'search':
-                this.setState({
-                    searchOpen: true
-                })
-                break;
+            // case 'search':
+            //     this.setState({
+            //         searchOpen: true
+            //     })
+            //     break;
             case 'log':
                 this.setState({
                     logOpen: true
@@ -74,7 +74,7 @@ class NavBar extends React.Component {
     signOut() {
         this.props.logout()
         this.setState({
-            searchOpen: false,
+            // searchOpen: false,
             logOpen: false,
         })
         setTimeout(
@@ -89,7 +89,7 @@ class NavBar extends React.Component {
     openModal(target) {
         this.props.openModal(target)
         this.setState({
-            searchOpen: false,
+            // searchOpen: false,
             logOpen: false,
         })
     }
@@ -126,14 +126,14 @@ class NavBar extends React.Component {
                         </li>
 
                     </ul>
-                    <div className='searchDrop' ref={this.searchContainer}>
-                        <button className='searchButton' onClick={() => this.dropDown('search')}>< FiSearch size='25px'/></button>
-                        {this.state.searchOpen && (
+                    <div className='searchDrop'>
+                        <button className='searchButton' onClick={() => this.openModal('search')}>< FiSearch size='25px'/></button>
+                        {/* {this.state.searchOpen && (
                             <div className='searchBar'>
                                 <span><FiSearch /></span>
                                 <input type="text" placeholder="Search KZXT.." autoFocus/>
                             </div>
-                        )}
+                        )} */}
                     </div>
                     <div className='logDrop' ref={this.logContainer}>
                         <button className="loginButton" onClick={() => this.dropDown('log')}>< FiUser size='25px'/></button>
