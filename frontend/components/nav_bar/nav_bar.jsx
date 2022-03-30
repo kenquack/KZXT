@@ -8,7 +8,7 @@ class NavBar extends React.Component {
         super(props)
         this.container = React.createRef();
         this.state = {
-            open: false,
+            open: false, //set back to false
         };
 
         const queryParams = this.props.location.search
@@ -77,9 +77,9 @@ class NavBar extends React.Component {
         let signButton;
         if (this.props.currentUser) {
             cartButton = <button className='cartButton' onClick={() => this.openModal('cart')}>< FiShoppingCart size='24px'/></button>
-            signButton = <button onClick={() => this.signOut()}>Sign Out</button>
+            signButton = <button onClick={() => this.signOut()} className='signButton'>Sign Out</button>
         } else {
-            signButton = <button onClick={() => this.openModal('login')}>Sign In</button>
+            signButton = <button onClick={() => this.openModal('login')} className='signButton'>Sign In</button>
             cartButton = <button className='cartButton' onClick={() => this.openModal('notLoggedIn')}>< FiShoppingCart size='24px'/></button>
         }
 
@@ -109,11 +109,19 @@ class NavBar extends React.Component {
                         <button className="loginButton" onClick={this.dropDown}>< FiUser size='25px'/></button>
                         {this.state.open && (
                             <div id='logContent'>
-                                <ul>
-                                    <li>{signButton}</li>
+                                <img src={window.triangleURL}></img>
+                                <ul id='leftContent'>
                                     <li>placehodler1</li>
                                     <li>placehodler2</li>
+                                    <li>placehodler3</li>
+                                    <li>{signButton}</li>
                                 </ul>
+                                <div id='dropDes'>
+                                    <h3>About</h3>
+                                    <p>KZXT is a clone of the website 'NZXT'! <br></br><br></br>
+                                        NZXT is an e-commerce site that <br></br>specializes in computer components.  <br></br><br></br>Hope you enjoy!
+                                    </p>
+                                </div>
                             </div>
                         )}
                     </div>

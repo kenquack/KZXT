@@ -106,3 +106,38 @@ p[id='Gaming PC-message'] {
     color: rgb(49, 50, 52);
     font-weight: bold;
 }
+
+.text-container {
+    position: absolute;
+    width: 20vw;
+    height: 71vh;
+    left: 20vw;
+    top: 80vh;
+}
+
+.text-container {
+    width: 20vw;
+  }
+
+#sticky {
+    position: sticky;
+    width: 18vw;
+    height: 10vh;
+    top: 300px;
+    margin-left: 2vw;
+    color: black;
+}
+
+#sticky > h3 {
+    font-family: 'Gotham-Bold';
+    font-size: 4vh;
+    margin-left: 8vh;
+    margin-bottom: 3vh;
+}
+
+#sticky > p {
+    font-family: 'Gotham';
+    font-size: 1.7vh;
+    font-weight: bold;
+    text-indent: 30px;
+}

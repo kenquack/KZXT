@@ -48,14 +48,62 @@
     color: white;
 }
 
+.signButton {
+    color: white;
+    font-size: 1.3vh;
+    /* margin-top: 0.8vh; */
+    margin-left: 1.5vh;
+}
+
 #logContent {
     margin-left: 40vh;
-    background: gray;
+    background: rgb(49, 50, 52);
     position: absolute;
-    left: 72vh;
-    width: 18vw;
-    padding: 0.5vw;
+    left: 75vh;
+    width: 20vw;
+    height: 15vh;
     top: 6vh;
+    border-radius: 10px;
+}
+
+#leftContent {
+    background: rgb(20, 20, 20);
+    /* margin: 0.5vw; */
+    width: 35%;
+    height: 100%;
+    z-index: 11;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#leftContent > li {
+    padding: 1vh 
+}
+
+#leftContent :nth-child(3) {
+    border-bottom: 1px solid white;
+}
+
+#dropDes > h3 {
+    font-family: 'Gotham-Bold';
+    position: absolute;
+    margin-left: 8vw;
+    top: 1vh;
+}
+
+#dropDes > p {
+    position: absolute;
+    width: 65%;
+    top: 3.2vh;
+    margin-left: 8vw;
+    font-size: 1.1vh;
+}
+
+#logContent > img {
+    position: absolute;
+    height: 1.3vh;
+    bottom: 14.3vh;
+    right: 1.5vw;
 }
 
 .cartButton {
