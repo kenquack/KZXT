@@ -1,0 +1,140 @@
+#show-page {
+    padding-top: 15vh;
+    display: flex;
+    /* background: red; */
+    height: 80vh;
+}
+
+#show-page > img {
+    width: 35vw;
+    height: 60vh;
+    margin-left: 20vw;
+}
+
+.show-info {
+    font-family: 'Gotham';
+    /* background: yellow; */
+    width: 20vw;
+    height: 30vh;
+    padding-left: 2.5vw;
+    padding-top: 1vh;
+}
+
+.show-info > h2 {
+    font-family: 'Gotham-Bold';
+    font-size: 3.5vh;
+    color: rgb(49, 50, 52);
+    margin-bottom: 3vh;
+}
+
+#show-price {
+    position: absolute;
+    font-size: 1.7vh;
+    font-family: 'Gotham';
+    font-weight: bold;
+    margin-left: 3vw;
+    margin-top: 1vw;
+}
+
+.show-info > h3 {
+    position: relative;
+    font-size: 1.9vh;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    color: rgb(145, 145, 155);
+    font-weight: bold;
+    margin-bottom: 1vh;
+}
+
+.show-info > h3:before {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 48%;
+    height: 1px;
+    content: '\a0';
+    background-color: rgb(221, 220, 231);
+}
+
+.show-info > h3:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 50%;
+    height: 1px;
+    content: '\a0';
+    background-color: rgb(221, 220, 231);
+    margin-left: 0.3vw;
+}
+
+.show-info > h3:before {
+    margin-left: -50%;
+    text-align: right;
+}
+
+.show-description {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#qty-container {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background: white;
+    border: 1px solid rgb(221, 220, 231);
+    border-radius: 10px;
+    width: 6vw;
+    text-align: center;
+    margin-left: 1vw;
+}
+
+#qty-container > span {
+    /* background: rgb(245, 245, 248); */
+    padding: 0.45vw;
+    padding-bottom: 0.54vw;
+    margin-right: 1.45vw;
+    margin-top: 2vh;
+    border-top-left-radius: 8.5px;
+    border-bottom-left-radius: 8.5px;
+    border-right: 1px solid rgb(221, 220, 231);
+    font-weight: bold;
+}
+
+#qty-container > select {
+    background: none;
+    border: none;
+    padding-right: 0.4vw;
+    /* margin-right: 1.7vw;
+    margin-top: 2vh; */
+}
+
+.show-description {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-weight: 200;
+    color: rgb(49, 50, 52);
+}
+
+.show-info > #addCart {
+    width: 90%;
+    margin-left: 1vw;
+}
+
+
+#show-affirm {
+    margin-left: 0.5vw;
+    font-size: 1.2vh;
+    text-align: center;
+}
+
+#show-affirm > img {
+    height: 18px;
+}
+
+#show-affirm > a {
+    text-decoration: none;
+    color: rgb(37, 99, 235);
+}

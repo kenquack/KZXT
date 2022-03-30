@@ -117,7 +117,7 @@
     position: relative;
     left: 62vh;
     color: white;
-    top: 0.3vh;
+    top: 0.6vh;
 }
 
 .main-page-button {
@@ -142,4 +142,33 @@ button {
 button:hover {
     cursor: pointer;
 }
+
+.searchBar {
+    position: absolute;
+    top: 5.2vh;
+    height: 4.3vh;
+    left: 0;
+    background: rgb(73, 72, 81);
+    width: 100vw;
+    padding-bottom: 0.3vh;
+}
+
+.searchBar > input {
+    background: transparent;
+    border: none;
+    margin-left: 1vw;
+    width: 25vw;
+}
+
+.searchBar > input:focus {
+    outline: none;
+    caret-color: white;
+    color: white;
+}
+
+.searchBar > span {
+    padding-top: 3vh;
+    margin-left: 20vw;
+}
+
 

@@ -40,32 +40,37 @@ class ProductShow extends React.Component {
 
         let cartButton;
         if (!currentUser) {
-            cartButton = <button onClick={(e) => this.props.openModal('notLoggedIn')} id='addCart'>Add to Cart</button>
+            cartButton = <button onClick={() => this.props.openModal('notLoggedIn')} id='addCart'>Add to Cart</button>
         } else {
             cartButton = <button onClick={(e) => this.addToCart(e)} id='addCart'>Add to Cart</button>
         }
 
         return (
-            <div>
+            <div id='show-page'>
                 {/* <img src={product.photoUrl} className='show-product-photo'/> */}
                 <img src={window.catURL} className='show-product-photo'/>
-                <h2>{product.name}</h2>
-                <div>{product.price}</div>
-                <br/>
-                <div>{product.description}</div>
-                <h3>Buy</h3>
-                <div>
-                    <span>QTY</span>                                       
-                    <select onChange={this.changeQuantity} quantity={this.state.quantity}>   
-                        <option value={1}>1</option>
-                        <option value={2}>2</option>
-                        <option value={3}>3</option>
-                        <option value={4}>4</option>
-                        <option value={5}>5</option>
-                        <option value={6}>6</option>
-                    </select>
-                </div>              
-                {cartButton}
+                <div className='show-info'>
+                    <h2>{product.name}
+                        <span id='show-price'>${product.price}</span>
+                    </h2>
+                    <br/>
+                    <h3>Details</h3>
+                    <div className='show-description'>{product.description}</div>
+                    <h3>Buy</h3>
+                    <div id='qty-container'>
+                        <span>QTY</span>                                       
+                        <select onChange={this.changeQuantity} quantity={this.state.quantity}>   
+                            <option value={1}>1</option>
+                            <option value={2}>2</option>
+                            <option value={3}>3</option>
+                            <option value={4}>4</option>
+                            <option value={5}>5</option>
+                            <option value={6}>6</option>
+                        </select>
+                    </div>              
+                    {cartButton}
+                    <p id='show-affirm'>As low as $21/mo with<img src={window.affirmURL}/> <a href="https://www.linkedin.com/in/kennethquach/">Learn More.</a></p>
+                </div>
             </div>
         )
     }

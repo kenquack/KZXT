@@ -6,9 +6,11 @@ import { FiUser, FiShoppingCart, FiSearch } from 'react-icons/fi'
 class NavBar extends React.Component {
     constructor(props) {
         super(props)
-        this.container = React.createRef();
+        this.logContainer = React.createRef();
+        this.searchContainer = React.createRef();
         this.state = {
-            open: false, //set back to false
+            searchOpen: false,
+            logOpen: false,
         };
 
         const queryParams = this.props.location.search
@@ -26,9 +28,15 @@ class NavBar extends React.Component {
     }
 
     handleClickOutside = (event) => {
-        if (this.container.current && !this.container.current.contains(event.target)) {
+        if (this.logContainer.current && !this.logContainer.current.contains(event.target)) {
             this.setState({
-                open: false,
+                logOpen: false,
+            });
+        }
+
+        if (this.searchContainer.current && !this.searchContainer.current.contains(event.target)){
+            this.setState({
+                searchOpen: false,
             });
         }
     };
@@ -45,16 +53,29 @@ class NavBar extends React.Component {
             );
     }
 
-    dropDown() {
-        this.setState({
-            open: !this.state.open
-        })
+    dropDown(input) {
+
+        switch(input){
+            case 'search':
+                this.setState({
+                    searchOpen: true
+                })
+                break;
+            case 'log':
+                this.setState({
+                    logOpen: true
+                })
+                break;
+            default:
+                return null;
+        }
     }
 
     signOut() {
         this.props.logout()
         this.setState({
-            open: false,
+            searchOpen: false,
+            logOpen: false,
         })
         setTimeout(
             this.props.history.push({
@@ -68,7 +89,8 @@ class NavBar extends React.Component {
     openModal(target) {
         this.props.openModal(target)
         this.setState({
-            open: false,
+            searchOpen: false,
+            logOpen: false,
         })
     }
 
@@ -104,10 +126,18 @@ class NavBar extends React.Component {
                         </li>
 
                     </ul>
-                    <button className='searchButton'>< FiSearch size='25px'/></button>
-                    <div className='logDrop' ref={this.container}>
-                        <button className="loginButton" onClick={this.dropDown}>< FiUser size='25px'/></button>
-                        {this.state.open && (
+                    <div className='searchDrop' ref={this.searchContainer}>
+                        <button className='searchButton' onClick={() => this.dropDown('search')}>< FiSearch size='25px'/></button>
+                        {this.state.searchOpen && (
+                            <div className='searchBar'>
+                                <span><FiSearch /></span>
+                                <input type="text" placeholder="Search KZXT.." autoFocus/>
+                            </div>
+                        )}
+                    </div>
+                    <div className='logDrop' ref={this.logContainer}>
+                        <button className="loginButton" onClick={() => this.dropDown('log')}>< FiUser size='25px'/></button>
+                        {this.state.logOpen && (
                             <div id='logContent'>
                                 <img src={window.triangleURL}></img>
                                 <ul id='leftContent'>
