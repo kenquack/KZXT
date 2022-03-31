@@ -1,13 +1,14 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
-import { FiUser, FiShoppingCart, FiSearch } from 'react-icons/fi'
+import { FiUser, FiShoppingCart, FiSearch, FiGithub } from 'react-icons/fi'
+import { FaLinkedin } from 'react-icons/fa'
 
 class NavBar extends React.Component {
     constructor(props) {
         super(props)
         this.logContainer = React.createRef();
-        // this.searchContainer = React.createRef();
+        // this.searchContainer = React.createRef(); this is for the drop down menu to work on specific columns
         this.state = {
             // searchOpen: false,
             logOpen: false,
@@ -25,6 +26,7 @@ class NavBar extends React.Component {
 
     componentDidMount() {
         document.addEventListener("mousedown", this.handleClickOutside);
+        this.props.fetchCartItems();
     }
 
     handleClickOutside = (event) => {
@@ -95,6 +97,14 @@ class NavBar extends React.Component {
     }
 
     render() {
+        const {closeModal, cartItems} = this.props
+
+        // cart count number
+        if (cartItems.length === 0) return null;
+        let cartCount = 0;
+        cartItems.map((item) => {cartCount += item.quantity})
+
+        // logic for what each buttons does
         let cartButton;
         let signButton;
         if (this.props.currentUser) {
@@ -105,7 +115,6 @@ class NavBar extends React.Component {
             cartButton = <button className='cartButton' onClick={() => this.openModal('notLoggedIn')}>< FiShoppingCart size='24px'/></button>
         }
 
-        const {closeModal} = this.props
         return(
             <div className='nav-bar-container'>
                 <div className='nav-bar'>
@@ -154,6 +163,11 @@ class NavBar extends React.Component {
                                 </div>
                             </div>
                         )}
+                    </div>
+                    <div id='navCartCount'><p>{cartCount}</p></div>
+                    <div className='socials'>
+                        <a href="https://github.com/kenquack"> <FiGithub /></a>
+                        <a href="https://www.linkedin.com/in/kennethquach/"> <FaLinkedin /></a>
                     </div>
                     {cartButton}
             </div>

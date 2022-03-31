@@ -23,10 +23,10 @@ class CartItemIndex extends React.Component {
         let usersCart = [];
         let totalItems = 0;
         for (let i = 0; i < this.props.cartItems.length; i++) {
-            if (this.props.cartItems[i].user_id === this.props.currentUser.id){
-                totalItems += this.props.cartItems[i].quantity
-                usersCart.push(this.props.cartItems[i])
-            }
+            // if (this.props.cartItems[i].user_id === this.props.currentUser.id){
+            // }
+            totalItems += this.props.cartItems[i].quantity
+            usersCart.push(this.props.cartItems[i])
         };
 
         let emptyCart;

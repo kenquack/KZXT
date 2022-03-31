@@ -2,10 +2,10 @@ import React from 'react';
 import ProductIndex from './product_index';
 
 
-const Filter = ({products, fetchAllProducts, changeFilter, filter, updateFilter}) => {
+const Filter = ({products, filter, updateFilter}) => {
     return (
         <div>
-            <ProductIndex changeFilter= {changeFilter} products={products} updateFilter={updateFilter} fetchAllProducts={fetchAllProducts} filter={filter}/>
+            <ProductIndex products={products} updateFilter={updateFilter} filter={filter}/>
         </div>
     )
 }

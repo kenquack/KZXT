@@ -199,6 +199,11 @@
     font-size: 1.5vh;
 }
 
+#cartCheckout:hover {
+    transform: scale(1.05);
+    background: rgb(88, 0, 252);
+}
+
 #affirm {
     margin-top: 1vh;;
     width: 22.2vw;

@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('Futura-Light.otf');
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('Gotham-Light.otf');
+}
+
+.nav-bar-container {
+    font-family: 'Gotham';
+    background: rgb(49, 50, 52);
+    display: flex;
+    width: 100%;
+    max-height: 5.3vh;
+    position: fixed;
+    z-index: 1000;
+    color: white;
+    top: 4vh;
+}
+
+.nav-bar {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 1vh;
+    padding-left: 35vh;
+}
+
+.nav-category-container {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.nav-categories {
+    padding-left: 5vh;
+    text-decoration: none;
+    color: white;
+    margin-top: 1vh;
+    /* background: yellow; */
+}
+
+.loginButton {
+    position: relative;
+    left: 64vh;
+    top: 0.6vh;
+    color: white;
+}
+
+.signButton {
+    color: white;
+    font-size: 1.3vh;
+    /* margin-top: 0.8vh; */
+    margin-left: 1.5vh;
+}
+
+#logContent {
+    margin-left: 40vh;
+    background: rgb(49, 50, 52);
+    position: absolute;
+    left: 75vh;
+    width: 20vw;
+    height: 15vh;
+    top: 6vh;
+    border-radius: 10px;
+}
+
+#leftContent {
+    background: rgb(20, 20, 20);
+    /* margin: 0.5vw; */
+    width: 35%;
+    height: 100%;
+    z-index: 11;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#leftContent > li {
+    padding: 1vh 
+}
+
+#leftContent :nth-child(3) {
+    border-bottom: 1px solid white;
+}
+
+#dropDes > h3 {
+    font-family: 'Gotham-Bold';
+    position: absolute;
+    margin-left: 8vw;
+    top: 1vh;
+}
+
+#dropDes > p {
+    position: absolute;
+    width: 65%;
+    top: 3.2vh;
+    margin-left: 8vw;
+    font-size: 1.1vh;
+}
+
+#logContent > img {
+    position: absolute;
+    height: 1.3vh;
+    bottom: 14.3vh;
+    right: 1.5vw;
+}
+
+.cartButton {
+    position: relative;
+    left: 64vh;
+    color: white;
+    top: 0.3vh;
+}
+
+.searchButton {
+    position: relative;
+    left: 62vh;
+    color: white;
+    top: 0.6vh;
+}
+
+.main-page-button {
+    text-decoration: none;
+    color: white;
+}
+
+#logo {
+    height: 100%;
+}
+
+.home-photo {
+    position: absolute;
+    width: 100%;
+}
+
+button {
+    background: transparent;
+    border-style: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.searchBar {
+    position: absolute;
+    top: 9.3vh;
+    height: 4.3vh;
+    left: 0;
+    background: rgb(73, 72, 81);
+    width: 100vw;
+    padding-bottom: 0.3vh;
+}
+
+.searchBar > input {
+    background: transparent;
+    border: none;
+    margin-left: 1vw;
+    width: 25vw;
+}
+
+.searchBar > input:focus {
+    outline: none;
+    caret-color: white;
+    color: white;
+}
+
+.searchBar > span {
+    padding-top: 3vh;
+    margin-left: 20vw;
+}
+
+.searchWindow {
+    font-family: 'Gotham';
+    background: white;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-top: 7vw;
+    padding: 1vh;
+    border-radius: 10px;
+}
+
+.resultPic{
+    width: 3vw;
+}
+
+.resultProduct {
+    display: flex;
+    padding: 1vh;
+    border-top: 1px solid rgb(221, 220, 231);
+    width: 98%;
+    /* background: red; */
+    text-decoration: none;
+}
+
+.resultProduct:first-child {
+    border: none;
+}
+
+.resultProduct > h3 {
+    padding-left: 1vh;
+    font-size: 1.5vh;
+    font-weight: bold;
+    color: rgb(31, 41, 55);
+}
+
+#navCartCount {
+    position: relative;
+    top: 0.3vh;
+    left: 67.7vh;
+    border-radius: 45%;
+    height: 1.5vh;
+    background: white;
+    color: rgb(31, 41, 55);
+    align-items: center;
+    z-index: 11;
+
+}
+
+#navCartCount > p {
+    font-size: 1.2vh;
+    font-family: 'Gotham-Bold';
+    padding-left: 0.4vh;
+    padding-right: 0.4vh;
+    padding-top: 0.2vh;
+    /* margin-bottom: 1vh; */
+}
+
+.socials {
+    position: fixed;
+    bottom: 2vh;
+    right: 2vh;
+    background: rgb(49, 50, 52);
+    width: 6vw;
+    height: 4.5vh;
+    border-radius: 40px;
+    border: 3px solid grey;
+}
+
+.socials > * {
+    position: relative;
+    bottom: -0.8vh;
+    left: 0.8vh;
+    font-size: 2.8vh;
+    color: white;
+    margin-left: 0.7vw;
+    text-decoration: none;
+}

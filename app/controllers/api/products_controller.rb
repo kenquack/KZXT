@@ -8,13 +8,6 @@ class Api::ProductsController < ApplicationController
         else
             @products = Product.all
         end
-        
-        # if (params[:filter][:category] != "")
-        #     @products = Product.where(category: params[:filter][:category])
-        # else
-        #     @products = Product.all
-        # end
-        
         render 'api/products/index'
     end
 

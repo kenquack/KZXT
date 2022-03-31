@@ -26,6 +26,11 @@ class SearchBar extends React.Component {
                 } else if (products[i].category.toLowerCase().includes(e.target.value.toLowerCase())) {
                     filtered.push(products[i])
                 }
+                // to limit amount of AWS requests
+                // future feature, include button to lead user to page of results
+                if (filtered.length > 2) {
+                    break;
+                }
             };
             this.setState({
                 results: filtered

@@ -24,6 +24,7 @@
 }
 
 button.session-submit:hover {
+    transform: scale(1.05);
     background: rgb(88, 0, 252);
 }
 
