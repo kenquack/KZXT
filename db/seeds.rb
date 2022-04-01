@@ -14,9 +14,6 @@ CartItem.destroy_all
 demoUser = User.create(email: 'demo@demo.com', password: 'demoPassword')
 user = User.create(email: 'test', password: 'password')
 
-cartItem1 = CartItem.create(user_id: 1, product_id: 3, quantity: 1)
-
-
 
 #foundation PC
 
@@ -137,3 +134,6 @@ peripheral2 = Product.create(
 
 file10 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Peripherals/boomarm.jpg")
 peripheral2.photo.attach(io:file10, filename:"boomarm")
+
+
+cartItem1 = CartItem.create(user_id: 1, product_id: 3, quantity: 1)
