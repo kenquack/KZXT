@@ -110,14 +110,11 @@ p[id='Gaming PC-message'] {
 .text-container {
     position: absolute;
     width: 20vw;
-    height: 71vh;
+    height: 60vh;
     left: 20vw;
-    top: 80vh;
+    top: 70vh;
+    /* background: yellow; */
 }
-
-.text-container {
-    width: 20vw;
-  }
 
 #sticky {
     position: sticky;
@@ -131,7 +128,7 @@ p[id='Gaming PC-message'] {
 #sticky > h3 {
     font-family: 'Gotham-Bold';
     font-size: 4vh;
-    margin-left: 8vh;
+    margin-left: 1vh;
     margin-bottom: 3vh;
 }
 

@@ -39,7 +39,8 @@ class CartItem extends React.Component {
         return (
             <div className='cartItem'>
                 <div>
-                    <img src={window.catURL} className='cart-product-photo'/>
+                    {/* <img src={window.catURL} className='cart-product-photo'/> */}
+                    <img src={product.photoUrl} className='cart-product-photo'/>
                 </div>
 
                 <div className='cartDes'>

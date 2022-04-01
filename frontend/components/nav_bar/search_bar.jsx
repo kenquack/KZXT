@@ -62,7 +62,8 @@ class SearchBar extends React.Component {
             response = this.state.results.map(product => (
                 <Link to={`/products/${product.id}`} key={product.id} className='resultProduct' onClick={closeModal}>
                 {/* <Link to={`/products/${product.id}`} key={product.id} className='resultProduct'></Link> */}
-                    <div><img src={window.catURL} className='resultPic'></img></div>
+                    {/* <div><img src={window.catURL} className='resultPic'></img></div> */}
+                    <div><img src={product.photoUrl} className='resultPic'/></div>
                     <h3>{product.name}</h3>
                 </Link>
             ))

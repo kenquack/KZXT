@@ -35,6 +35,7 @@ class ProductShow extends React.Component {
     }
 
     render() {
+        window.scrollTo(0, 0)
         if (!this.props.product) return null;
         const { product, currentUser } = this.props;
 
@@ -47,8 +48,8 @@ class ProductShow extends React.Component {
 
         return (
             <div id='show-page'>
-                {/* <img src={product.photoUrl} className='show-product-photo'/> */}
-                <img src={window.catURL} className='show-product-photo'/>
+                <img src={product.photoUrl} className='show-product-photo'/>
+                {/* <img src={window.catURL} className='show-product-photo'/> */}
                 <div className='show-info'>
                     <h2>{product.name}
                         <span id='show-price'>${product.price}</span>

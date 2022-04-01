@@ -5,8 +5,8 @@ const ProductIndexItem = ( {product} ) => {
     return (
             <div className='index-product'>
                 <Link to={`/products/${product.id}`}>
-                    {/* <img src={product.photoUrl} className='index-product-photo'/> */}
-                    <img src={window.catURL} className='index-product-photo'/>
+                    <img src={product.photoUrl} className='index-product-photo'/>
+                    {/* <img src={window.catURL} className='index-product-photo'/> */}
                 </Link>
             
                 <h3 className='product-index-name'>{product.name}</h3>

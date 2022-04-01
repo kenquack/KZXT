@@ -75,9 +75,9 @@
 
 .footer {
     position: absolute;
-    bottom: -150vh;
+    bottom: -135vh;
     background: rgb(26, 28, 30);
-    width: 100vw;
+    width: 99.18vw;
     color: white;
     font-family: 'Gotham';
     padding-top: 5vh;
@@ -91,5 +91,17 @@
 }
 
 .contact-container > ul {
-    color: rgb(221, 220, 231);
+    color: rgb(192, 191, 199);
+}
+
+.contact-list > h3 {
+    color: white;
+    font-family: 'Gotham-Bold';
+    padding-bottom: 1.5vh;
+    font-size: 1.8vh;
+}
+
+.contact-list > li {
+    font-size: 1.4vh;
+    padding-bottom: 1.5vh;
 }

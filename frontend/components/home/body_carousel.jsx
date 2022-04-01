@@ -21,8 +21,9 @@ class Carousel extends React.Component {
                 <div className='body-preview'>
                     {this.props.products.map((item) => {
                         return (
-                            <div className='body-preview-item'>
-                                <img src={window.catURL}/>
+                            <div className='body-preview-item' key={item.id}>
+                                {/* <img src={window.catURL}/> */}
+                                <img src={item.photoUrl}/>
                                 <div id='body-item-name'>
                                     {item.name}
                                 </div>

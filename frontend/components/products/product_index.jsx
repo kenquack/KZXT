@@ -22,22 +22,30 @@ class ProductIndex extends React.Component {
         if (!this.props.products) return null;
 
         let header;
+        let header2;
         let message;
+        let message2;
         let headerPic;
         let footerPic;
         if (this.props.filter.category === 'Gaming PC') {
             header = 'The Creator Series'
+            header2 = 'ADVENTURE IN A BOX'
             message = 'Power the Imagination'
+            message2 = 'Embark on an exciting new adventure into PC gaming.'
             headerPic = productLinks.gamingPC.header
             footerPic = productLinks.gamingPC.footer
         } else if (this.props.filter.category === 'Component'){
             header = 'The Kraken Series'
+            header2 = 'THE LIMITLESS KRAKEN Z'
             message = 'AIO Liquid Cooler with LCD Display'
+            message2 = 'The Kraken Z Series provides unique personality with a customizable LCD display.'
             headerPic = productLinks.component.header
             footerPic = productLinks.component.footer
         } else if (this.props.filter.category === 'Peripheral') {
             header = 'Capsule and Boom'
+            header2 = 'MEET CAPSULE AND BOOM'
             message = 'Plug & Call The Shots'
+            message2 = 'NZXT Capsule and Boom Arm are designed for a simple plug-and play experience, making them perfect companions for communicating while gaming or streaming.'
             headerPic = productLinks.peripheral.header
             footerPic = productLinks.peripheral.footer
         }
@@ -46,12 +54,12 @@ class ProductIndex extends React.Component {
             <div className='index-page'>
                 <h2 className='index-header'>{header}</h2>
                 <p id={`${this.props.filter.category}-message`}>{message}</p>
-                {/* <img src={headerPic} className='index-header-photo'/> */}
-                <img src='https://media.npr.org/assets/img/2021/08/11/gettyimages-1279899488_wide-f3860ceb0ef19643c335cb34df3fa1de166e2761-s1100-c50.jpg' className='index-header-photo'/>
+                <img src={headerPic} className='index-header-photo'/>
+                {/* <img src='https://media.npr.org/assets/img/2021/08/11/gettyimages-1279899488_wide-f3860ceb0ef19643c335cb34df3fa1de166e2761-s1100-c50.jpg' className='index-header-photo'/> */}
                 <div className='text-container'>
                     <div id='sticky'>
-                        <h3>THIS IS A HEADER</h3>
-                        <p>This is the text that will be changed but this is just a placeholder to see how it looks.</p>             
+                        <h3>{header2}</h3>
+                        <p>{message2}</p>             
                     </div>              
                 </div>
                 <div className='index-container'>
@@ -60,8 +68,8 @@ class ProductIndex extends React.Component {
                     })}
 
                 </div>
-                {/* <img src={footerPic} className='index-footer-photo'/> */}
-                <img src='https://icatcare.org/app/uploads/2018/07/Elderly-cats.png' className='index-footer-photo'/>
+                <img src={footerPic} className='index-footer-photo'/>
+                {/* <img src='https://icatcare.org/app/uploads/2018/07/Elderly-cats.png' className='index-footer-photo'/> */}
             </div>
         )
     }
