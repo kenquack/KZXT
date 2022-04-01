@@ -9,6 +9,7 @@ import Modal from "./modal/modal";
 import SearchContainer from './products/search_container';
 import Slideshow from './nav_bar/slide_bar';
 import ProductShowContainer from './products/product_show_container';
+import Footer from "./home/footer";
 
 const App = () => (
     <div>
@@ -24,6 +25,8 @@ const App = () => (
             <Route exact path="/" component={Home} />
             <Redirect to="/" />
         </Switch>
+
+        <Footer />
     </div>
 );
 

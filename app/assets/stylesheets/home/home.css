@@ -35,3 +35,61 @@
     padding-left: 2vw;
     padding-right: 2vw;
 }
+
+.body-preview-item:first-child, .body-preview-item:nth-child(5) {
+    display: none;
+}
+
+.body-preview {
+    font-family: 'Gotham';
+    /* background: yellow; */
+    position: absolute;
+    top: 115vh;
+    width: 60vw;
+    height: 80vh;
+    left: 17vw;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3vh;
+    padding-bottom: 5vh;
+}
+
+#body-header {
+    font-family: 'Gotham-Bold';
+    position: absolute;
+    top: 100vh;
+    left: 35vw;
+    font-size: 3vw;
+}
+
+.body-preview-item > img {
+    width: 15vw;
+    height: 25vh;
+    margin-bottom: 2vh;
+}
+
+#body-item-name {
+    font-size: 2vh;
+    font-family: 'Gotham-Bold';
+}
+
+.footer {
+    position: absolute;
+    bottom: -150vh;
+    background: rgb(26, 28, 30);
+    width: 100vw;
+    color: white;
+    font-family: 'Gotham';
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+}
+
+.contact-container {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 20vw;
+}
+
+.contact-container > ul {
+    color: rgb(221, 220, 231);
+}
