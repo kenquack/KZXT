@@ -22,6 +22,7 @@ class CartItemIndex extends React.Component {
         //     <div>test</div>
         // )
         if (!this.props.cartItems) return null;
+        if (!this.props.products) return null;
         if (!this.props) return null;
         let usersCart = [];
         let totalItems = 0;
