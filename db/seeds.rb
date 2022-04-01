@@ -10,6 +10,9 @@ require 'open-uri'
 User.destroy_all
 Product.destroy_all
 CartItem.destroy_all
+ActiveRecord::Base.connection.tables.each do |t|
+    ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
 
 demoUser = User.create(email: 'demo@demo.com', password: 'demoPassword')
 user = User.create(email: 'test', password: 'password')
