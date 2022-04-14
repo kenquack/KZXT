@@ -42,10 +42,10 @@
 }
 
 .loginButton {
-    position: relative;
-    left: 64vh;
-    top: 0.6vh;
+    position: absolute;
+    right: 46.5vh;
     color: white;
+    top: 1.7vh;
 }
 
 .signButton {
@@ -107,17 +107,17 @@
 }
 
 .cartButton {
-    position: relative;
-    left: 64vh;
+    position: absolute;
+    right: 37.5vh;
     color: white;
-    top: 0.4vh;
+    top: 1.7vh;
 }
 
 .searchButton {
-    position: relative;
-    left: 62vh;
+    position: absolute;
+    right: 42vh;
     color: white;
-    top: 0.6vh;
+    top: 1.7vh;
 }
 
 .main-page-button {
@@ -206,9 +206,9 @@ button:hover {
 }
 
 #navCartCount {
-    position: relative;
-    top: 0.2vh;
-    left: 67.9vh;
+    position: absolute;
+    top: 1.2vh;
+    right: 37.5vh;
     border-radius: 45%;
     height: 1.5vh;
     background: white;

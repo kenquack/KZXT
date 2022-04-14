@@ -100,23 +100,24 @@ class NavBar extends React.Component {
         const {closeModal, cartItems, currentUser} = this.props
         
         // cart count number
-        if (cartItems.length === 0) return null;
         let cartCount = 0;
         cartItems.map((item) => {cartCount += item.quantity})
         let counter;
         if (cartCount !== 0 && currentUser) {
             counter = <div id='navCartCount'><p>{cartCount}</p></div>
+        } else {
+            counter = <div></div>
         }
 
         // logic for what each buttons does
         let cartButton;
         let signButton;
         if (currentUser) {
-            cartButton = <button className='cartButton' onClick={() => this.openModal('cart')}>< FiShoppingCart size='24px'/></button>
+            cartButton = <button className='cartButton' onClick={() => this.openModal('cart')}>< FiShoppingCart size='2.5vh'/></button>
             signButton = <button onClick={() => this.signOut()} className='signButton'>Sign Out</button>
         } else {
             signButton = <button onClick={() => this.openModal('login')} className='signButton'>Sign In</button>
-            cartButton = <button className='cartButton' onClick={() => this.openModal('notLoggedIn')}>< FiShoppingCart size='24px'/></button>
+            cartButton = <button className='cartButton' onClick={() => this.openModal('notLoggedIn')}>< FiShoppingCart size='2.5vh'/></button>
         }
 
         return(
@@ -140,7 +141,7 @@ class NavBar extends React.Component {
 
                     </ul>
                     <div className='searchDrop'>
-                        <button className='searchButton' onClick={() => this.openModal('search')}>< FiSearch size='25px'/></button>
+                        <button className='searchButton' onClick={() => this.openModal('search')}>< FiSearch size='2.5vh'/></button>
                         {/* {this.state.searchOpen && (
                             <div className='searchBar'>
                                 <span><FiSearch /></span>
@@ -149,7 +150,7 @@ class NavBar extends React.Component {
                         )} */}
                     </div>
                     <div className='logDrop' ref={this.logContainer}>
-                        <button className="loginButton" onClick={() => this.dropDown('log')}>< FiUser size='25px'/></button>
+                        <button className="loginButton" onClick={() => this.dropDown('log')}>< FiUser size='2.5vh'/></button>
                         {this.state.logOpen && (
                             <div id='logContent'>
                                 <img src={window.triangleURL}></img>
@@ -168,11 +169,11 @@ class NavBar extends React.Component {
                             </div>
                         )}
                     </div>
-                    {counter}
                     <div className='socials'>
                         <a href="https://github.com/kenquack"> <FiGithub /></a>
                         <a href="https://www.linkedin.com/in/kennethquach/"> <FaLinkedin /></a>
                     </div>
+                    <span>{counter}</span>
                     {cartButton}
             </div>
         </div>
