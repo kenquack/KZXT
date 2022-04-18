@@ -70,7 +70,7 @@ class ProductShow extends React.Component {
                         </select>
                     </div>              
                     {cartButton}
-                    <p id='show-affirm'>As low as $21/mo with<img src={window.affirmURL}/> <a href="https://www.linkedin.com/in/kennethquach/">Learn More.</a></p>
+                    <p id='show-affirm'>As low as $21/mo with<img src={window.affirmURL}/> Learn More.</p>
                 </div>
             </div>
         )

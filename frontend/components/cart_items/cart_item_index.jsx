@@ -29,7 +29,7 @@ class CartItemIndex extends React.Component {
             totalItems += this.props.cartItems[i].quantity
             usersCart.push(this.props.cartItems[i])
         };
-        console.log(usersCart)
+        
         let emptyCart;
         if (usersCart.length === 0) {
             emptyCart = (
