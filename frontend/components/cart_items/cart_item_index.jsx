@@ -19,7 +19,7 @@ class CartItemIndex extends React.Component {
 
     render() {
         if (!this.props.cartItems) return null;
-        if (!this.props.products) return null;
+        // if (!this.props.products) return null;
         if (!this.props) return null;
         let usersCart = [];
         let totalItems = 0;
@@ -29,11 +29,13 @@ class CartItemIndex extends React.Component {
             totalItems += this.props.cartItems[i].quantity
             usersCart.push(this.props.cartItems[i])
         };
-
+        console.log(usersCart)
         let emptyCart;
         if (usersCart.length === 0) {
             emptyCart = (
-                <div id='empty'>yo cart empty</div>
+                <div id='empty'>
+                    <p>Your cart is empty!</p>
+                </div>
             )
         };
 
@@ -75,7 +77,7 @@ class CartItemIndex extends React.Component {
                         <p id='footDescription'>*New and/or refurbished products may process and ship at different times.</p>
 
                         <button id='cartCheckout'>Proceed to Checkout</button>
-                        <p id='affirm'>As low as $21/mo with<img src={window.affirmURL}/> <a href="https://www.linkedin.com/in/kennethquach/">Learn More.</a></p>
+                        <p id='affirm'>As low as $21/mo with<img src={window.affirmURL}/> Learn More.</p>
                     </div>
                 </div>
             </div>

@@ -23,8 +23,13 @@ class CartItem extends React.Component {
                 this.props.editCartItem(product, this.state.quantity + 1)
                 break;
             case 'decrease':
-                this.setState({quantity: this.state.quantity - 1});
-                this.props.editCartItem(product, this.state.quantity - 1)
+                if (this.state.quantity - 1 === 0) {
+                    this.props.deleteCartItem(product.id)
+                    this.setState({quantity: 0})
+                } else {
+                    this.setState({quantity: this.state.quantity - 1});
+                    this.props.editCartItem(product, this.state.quantity - 1)
+                }
                 break;
         }
     }
