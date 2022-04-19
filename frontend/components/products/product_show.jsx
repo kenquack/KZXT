@@ -1,5 +1,6 @@
 import React from 'react';
-
+import ReviewIndexContainer from '../reviews/reviews_container';
+import ReviewForm from '../reviews/review_form';
 
 class ProductShow extends React.Component {
     constructor(props) {
@@ -47,31 +48,35 @@ class ProductShow extends React.Component {
         }
 
         return (
-            <div id='show-page'>
-                <img src={product.photoUrl} className='show-product-photo'/>
-                {/* <img src={window.catURL} className='show-product-photo'/> */}
-                <div className='show-info'>
-                    <h2>{product.name}
-                        <span id='show-price'>${product.price}</span>
-                    </h2>
-                    <br/>
-                    <h3>Details</h3>
-                    <div className='show-description'>{product.description}</div>
-                    <h3>Buy</h3>
-                    <div id='qty-container'>
-                        <span>QTY</span>                                       
-                        <select onChange={this.changeQuantity} quantity={this.state.quantity}>   
-                            <option value={1}>1</option>
-                            <option value={2}>2</option>
-                            <option value={3}>3</option>
-                            <option value={4}>4</option>
-                            <option value={5}>5</option>
-                            <option value={6}>6</option>
-                        </select>
-                    </div>              
-                    {cartButton}
-                    <p id='show-affirm'>As low as $21/mo with<img src={window.affirmURL}/> Learn More.</p>
+            <div>
+                <div id='show-page'>
+                    <img src={product.photoUrl} className='show-product-photo'/>
+                    {/* <img src={window.catURL} className='show-product-photo'/> */}
+                    <div className='show-info'>
+                        <h2>{product.name}
+                            <span id='show-price'>${product.price}</span>
+                        </h2>
+                        <br/>
+                        <h3>Details</h3>
+                        <div className='show-description'>{product.description}</div>
+                        <h3>Buy</h3>
+                        <div id='qty-container'>
+                            <span>QTY</span>                                       
+                            <select onChange={this.changeQuantity} quantity={this.state.quantity}>   
+                                <option value={1}>1</option>
+                                <option value={2}>2</option>
+                                <option value={3}>3</option>
+                                <option value={4}>4</option>
+                                <option value={5}>5</option>
+                                <option value={6}>6</option>
+                            </select>
+                        </div>              
+                        {cartButton}
+                        <p id='show-affirm'>As low as $21/mo with<img src={window.affirmURL}/> Learn More.</p>
+                    </div>
                 </div>
+                <ReviewIndexContainer product={product}/>
+                <ReviewForm openModal={this.props.openModal} currentUser={this.props.currentUser} product={this.props.product} createReview={this.props.createReview}/>
             </div>
         )
     }
