@@ -1,6 +1,7 @@
 class Api::ReviewsController < ApplicationController
     def index
-        @reviews = Reviews.all
+        # @reviews = Reviews.all
+        @reviews = Review.where(product_id: params[:id])
         render :index
     end
 
@@ -25,7 +26,7 @@ class Api::ReviewsController < ApplicationController
         if @review.update(review_params)
             render :show
         else
-            render json: @review.errors.full_messages, stauts
+            render json: @review.errors.full_messages, status: 422
         end
     end
 
