@@ -22,7 +22,7 @@ class ReviewIndex extends React.Component {
             <div id='reviews'>
                 {reviews.map((review) => {
                     return (
-                        <div>{review.body}</div>
+                        <div id='reviews'>{review.body}</div>
                     )
                 })}
             </div>
