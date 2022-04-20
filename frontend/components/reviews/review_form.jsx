@@ -37,7 +37,7 @@ class ReviewForm extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <textarea type='text' value={this.state.text} onChange={this.updateText}></textarea>
+                    <textarea type='text' value={this.state.body} onChange={this.updateText}></textarea>
                     <button>Leave Review</button>
                 </form>
             </div>

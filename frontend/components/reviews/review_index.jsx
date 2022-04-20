@@ -1,4 +1,5 @@
 import React from 'react';
+import ReviewShow from './review_show';
 
 class ReviewIndex extends React.Component {
     constructor(props) {
@@ -22,7 +23,14 @@ class ReviewIndex extends React.Component {
             <div id='reviews'>
                 {reviews.map((review) => {
                     return (
-                        <div>{review.body}</div>
+                        <div key={review.id}>
+                            <ReviewShow 
+                                review={review} 
+                                deleteReview={this.props.deleteReview} 
+                                currentUser={this.props.currentUser}
+                                editReview={this.props.editReview}
+                            />
+                        </div>
                     )
                 })}
             </div>

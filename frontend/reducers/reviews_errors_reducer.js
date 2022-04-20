@@ -3,7 +3,6 @@ import { RECEIVE_REVIEW_ERRORS, RECEIVE_REVIEW, CLEAR_REVIEW_ERRORS } from "../a
 
 const reviewErrorsReducer = (state = [], action) => {
     Object.freeze(state);
-    console.log(action)
     switch (action.type) {
         case RECEIVE_REVIEW_ERRORS:
             return action.errors;

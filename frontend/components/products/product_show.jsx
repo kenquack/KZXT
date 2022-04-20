@@ -14,6 +14,7 @@ class ProductShow extends React.Component {
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.id);
         this.props.fetchCartItems();
+        window.scrollTo(0, 0)
     }
     
     changeQuantity(e){
@@ -36,7 +37,7 @@ class ProductShow extends React.Component {
     }
 
     render() {
-        window.scrollTo(0, 0)
+        // window.scrollTo(0, 0)
         if (!this.props.product) return null;
         const { product, currentUser } = this.props;
 
