@@ -1,4 +1,5 @@
 import React from 'react';
+import {FaEdit, FaTrashAlt} from 'react-icons/fa'
 
 class ReviewShow extends React.Component {
     constructor(props) {
@@ -82,18 +83,19 @@ class ReviewShow extends React.Component {
                         {this.state.userName}
                     </h2>
                     <div>
-                        <div>{this.rating()}</div>
-                        {review.date}
+                        <div className='review-rating'>{this.rating()}</div>
+                        <div className='review-date'>{review.date}</div>
+                        {this.props.currentUser && this.props.currentUser.id === review.userId && !this.state.editMode && (
+                            <div className='review-icons'>
+                                <button onClick={() => this.editReview()}><FaEdit/></button> 
+                                <button onClick={(e) => this.deleteReview(e, review.id)}><FaTrashAlt /></button>
+                            </div>
+                        )}
                     </div>
                 </div>
-                {this.props.currentUser && this.props.currentUser.id === review.userId && !this.state.editMode && (
-                    <div>
-                        <button onClick={() => this.editReview()}>Edit</button> 
-                        <button onClick={(e) => this.deleteReview(e, review.id)}>Delete</button>
-                    </div>
-                )}
+                
                 {this.state.editMode && (
-                    <div>
+                    <div className='review-edit'>
                         <span>Rating</span> 
                         <select onChange={this.changeRating} rating={this.state.rating} value={this.state.rating}>   
                             <option value={1}>1</option>
@@ -103,16 +105,17 @@ class ReviewShow extends React.Component {
                             <option value={5}>5</option>
                         </select>
                         <form onSubmit={this.handleSubmit}>
-                            <textarea value={this.state.body} onChange={this.update('body')}></textarea>
-                            <button>Save Changes</button>
+                            <textarea value={this.state.body} onChange={this.update('body')} id='edit-text'></textarea><br/>
+                            <div className='edit-buttons'>
+                                <button type='submit'>Save Changes</button>
+                                <button onClick={() => this.setState({editMode: false})}>Cancel</button>
+                            </div>
                         </form>
                     </div>
                 )}
                 {!this.state.editMode && (
-                    <div>
-                        <div>
-                            {this.state.body}
-                        </div>
+                    <div className='review-body'>
+                        {this.state.body}
                     </div>
                 )}
             </div>
