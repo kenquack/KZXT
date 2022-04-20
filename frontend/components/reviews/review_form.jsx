@@ -10,10 +10,15 @@ class ReviewForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateText = this.updateText.bind(this);
+        this.changeRating = this.changeRating.bind(this);
     }
 
     updateText(e) {
         this.setState({ body: e.target.value });
+    }
+
+    changeRating(e){
+        this.setState({rating: e.target.value})
     }
 
     handleSubmit(e) {
@@ -35,9 +40,19 @@ class ReviewForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='rating-form'>
+                <div className='rating-container'>
+                    <span>Select Rating</span>                                       
+                    <select onChange={this.changeRating} rating={this.state.rating}>   
+                        <option value={1}>1</option>
+                        <option value={2}>2</option>
+                        <option value={3}>3</option>
+                        <option value={4}>4</option>
+                        <option value={5}>5</option>
+                    </select>
+                </div>             
                 <form onSubmit={this.handleSubmit}>
-                    <textarea type='text' value={this.state.body} onChange={this.updateText}></textarea>
+                    <textarea type='text' value={this.state.body} onChange={this.updateText} placeholder='Write review here'></textarea>
                     <button>Leave Review</button>
                 </form>
             </div>

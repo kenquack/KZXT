@@ -76,6 +76,7 @@ class ProductShow extends React.Component {
                         <p id='show-affirm'>As low as $21/mo with<img src={window.affirmURL}/> Learn More.</p>
                     </div>
                 </div>
+                <h2 className='review-header'>Customer Reviews</h2>
                 <ReviewIndexContainer product={product}/>
                 <ReviewForm openModal={this.props.openModal} currentUser={this.props.currentUser} product={this.props.product} createReview={this.props.createReview}/>
             </div>

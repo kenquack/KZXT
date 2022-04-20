@@ -1,0 +1,63 @@
+.review-header {
+    font-family: 'Gotham-Bold';
+    position: relative;
+    font-size: 3.2vh;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    color: rgb(49, 50, 52);
+    font-weight: bold;
+    margin-bottom: 5vh;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.review-header:before {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 49%;
+    height: 1px;
+    content: '\a0';
+    background-color: rgb(131, 122, 127);
+    margin-left: -50%;
+    text-align: right;
+}
+
+.review-header:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 49%;
+    margin-left: 1%;
+    height: 1px;
+    content: '\a0';
+    background-color: rgb(131, 122, 127);
+}
+
+.review-show {
+    width: 80%;
+    height: 20vh;
+    margin-left: 10%;
+    background: yellow;
+    border-bottom: 1px solid rgb(131, 122, 127);
+    margin-bottom: 2vh;
+}
+
+.review-container {
+    height: 30%;
+    position: relative;
+    /* display: flex; */
+    float: left;
+}
+
+.reviewer-picture {
+    background: lightgray;
+    display: flex;
+    width: 7vh;
+    height: 7vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 1vh;
+}
