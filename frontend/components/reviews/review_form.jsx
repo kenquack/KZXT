@@ -43,7 +43,7 @@ class ReviewForm extends React.Component {
             <div className='rating-form'>
                 <div className='rating-container'>
                     <span>Select Rating</span>                                       
-                    <select onChange={this.changeRating} rating={this.state.rating}>   
+                    <select onChange={this.changeRating} rating={this.state.rating} value={this.state.rating}>   
                         <option value={1}>1</option>
                         <option value={2}>2</option>
                         <option value={3}>3</option>
@@ -51,8 +51,8 @@ class ReviewForm extends React.Component {
                         <option value={5}>5</option>
                     </select>
                 </div>             
-                <form onSubmit={this.handleSubmit}>
-                    <textarea type='text' value={this.state.body} onChange={this.updateText} placeholder='Write review here'></textarea>
+                <form onSubmit={this.handleSubmit} id='review-create'>
+                    <textarea type='text' value={this.state.body} onChange={this.updateText} placeholder='Write review here'></textarea><br/>
                     <button>Leave Review</button>
                 </form>
             </div>

@@ -15,7 +15,7 @@ class ReviewIndex extends React.Component {
         let reviewIndex;
         if (reviews.length === 0) {
             reviewIndex = 
-            <div>
+            <div className='no-reviews'>
                 Be the first to leave a review.
             </div>
         } else {

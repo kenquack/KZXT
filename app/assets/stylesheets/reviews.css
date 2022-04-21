@@ -7,7 +7,7 @@
     text-align: center;
     color: rgb(49, 50, 52);
     font-weight: bold;
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
     width: 80%;
     margin-left: 10%;
 }
@@ -140,4 +140,59 @@
     height: 10vh;
     border-color: rgb(224, 215, 220);
     border-radius: 10px;
+}
+
+.rating-form {
+    /* background: red; */
+    width: 80%;
+    margin-top: 3%;
+    margin-left: 10%;
+    text-align: center;
+    height: 20vh;
+}
+
+#review-create {
+    /* background: yellow; */
+    width: 80%;
+    margin-left: 10%;
+    height: 80%;
+}
+
+.rating-container {
+    margin-bottom: 2vh;
+}
+
+#review-create > textarea {
+    width: 50%;
+    height: 100%;
+    font-family: 'Gotham';
+    border-color: rgb(224, 215, 220);
+    border-radius: 10px;
+}
+.rating-container > span {
+    margin-right: 1%;
+    font-family: 'Gotham';
+}
+
+.rating-container > select {
+    border-color: rgb(224, 215, 220);
+    padding: 0.5%;
+    border-radius: 10px;
+}
+
+.no-reviews {
+    /* background: yellow; */
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    font-size: 2vh;
+    margin-bottom: 5vh;
+}
+
+#review-create > button {
+    background: rgb(138, 0, 252);
+    padding: 1.2%;
+    margin-top: 1vh;
+    border-radius: 10px;
+    color: white;
 }
