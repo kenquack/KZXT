@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { updateFilter } from '../../actions/filter_actions';
+import { Link } from 'react-router-dom';
 
 class Carousel extends React.Component {
     constructor(props) {
@@ -23,7 +24,9 @@ class Carousel extends React.Component {
                         return (
                             <div className='body-preview-item' key={item.id}>
                                 {/* <img src={window.catURL}/> */}
-                                <img src={item.photoUrl}/>
+                                <Link to={`/products/${item.id}`}>
+                                    <img src={item.photoUrl} id='body-preview-image'/>
+                                </Link>
                                 <div id='body-item-name'>
                                     {item.name}
                                 </div>

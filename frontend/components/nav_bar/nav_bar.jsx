@@ -155,9 +155,9 @@ class NavBar extends React.Component {
                             <div id='logContent'>
                                 <img src={window.triangleURL}></img>
                                 <ul id='leftContent'>
-                                    <li>placehodler1</li>
-                                    <li>placehodler2</li>
-                                    <li>placehodler3</li>
+                                    <li><a href="https://github.com/kenquack" className='nav-social'>Github</a></li>
+                                    <li><a href="https://www.linkedin.com/in/kennethquach/" className='nav-social'>LinkedIn</a></li>
+                                    <li><a href="https://angel.co/u/kenneth-quach" className='nav-social'>AngelList</a></li>
                                     <li>{signButton}</li>
                                 </ul>
                                 <div id='dropDes'>

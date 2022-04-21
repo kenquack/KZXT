@@ -67,7 +67,7 @@
     font-size: 3vw;
 }
 
-.body-preview-item > img {
+#body-preview-image {
     width: 15vw;
     height: 25vh;
     margin-bottom: 2vh;
