@@ -1,10 +1,13 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import CartItem from './cart_item';
-import { MdClose } from 'react-icons/md'
+import { MdClose } from 'react-icons/md';
 
 class CartItemIndex extends React.Component {
     constructor(props){
         super(props)
+
+        this.checkOut = this.checkOut.bind(this);
     }
 
     componentDidMount() {
@@ -15,6 +18,20 @@ class CartItemIndex extends React.Component {
 
     componentWillUnmount() {
         document.body.style.overflow = "visible";
+    }
+
+    checkOut() {
+        this.props.history.push({
+            pathname: '/checkout'
+        });
+        this.props.closeModal();
+        this.clearCart();
+    }
+
+    clearCart() {
+        this.props.cartItems.map((item) => {
+            this.props.deleteCartItem(item.id)
+        });
     }
 
     render() {
@@ -76,7 +93,7 @@ class CartItemIndex extends React.Component {
                         </p>
                         <p id='footDescription'>*New and/or refurbished products may process and ship at different times.</p>
 
-                        <button id='cartCheckout'>Proceed to Checkout</button>
+                        <button id='cartCheckout' onClick={() => this.checkOut()}>Proceed to Checkout</button>
                         <p id='affirm'>As low as $21/mo with<img src={window.affirmURL}/> Learn More.</p>
                     </div>
                 </div>
@@ -85,4 +102,4 @@ class CartItemIndex extends React.Component {
     }
 }
 
-export default CartItemIndex
+export default withRouter(CartItemIndex);

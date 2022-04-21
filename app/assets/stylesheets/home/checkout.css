@@ -1,0 +1,27 @@
+.checkout-container {
+    display: block;
+    padding-top: 20vh;
+    margin-left: 10%;
+    width: 80%;
+    height: 50vh;
+    /* background: yellow; */
+    text-align: center;
+    font-family: 'Gotham';
+    font-size: 2vh;
+}
+
+.checkout-container > h2 {
+    font-size: 4vh;
+    margin-bottom: 5vh;
+}
+
+.checkout-container > a {
+    text-decoration: none;
+    color: black;
+    font-size: 4vh;
+    margin-right: 2vh;
+}
+
+.checkout-container > p {
+    margin-bottom: 4vh;
+}

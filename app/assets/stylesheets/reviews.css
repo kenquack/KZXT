@@ -205,4 +205,5 @@
 .review-form-error-list > li {
     margin-bottom: 1vh;
     font-family: 'Gotham';
+    color: red;
 }

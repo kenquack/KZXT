@@ -10,6 +10,7 @@ import SearchContainer from './products/search_container';
 import Slideshow from './nav_bar/slide_bar';
 import ProductShowContainer from './products/product_show_container';
 import Footer from "./home/footer";
+import Checkout from "./home/checkout";
 
 const App = () => (
     <div>
@@ -22,6 +23,7 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <Route exact path='/products/:id' component={ProductShowContainer} />
             <Route exact path="/products" component={SearchContainer} />
+            <Route exact path="/checkout" component={Checkout} />
             <Route exact path="/" component={Home} />
             <Redirect to="/" />
         </Switch>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaEdit, FaTrashAlt} from 'react-icons/fa'
+import {FiEdit, FiTrash2 } from 'react-icons/fi'
 
 class ReviewShow extends React.Component {
     constructor(props) {
@@ -87,8 +87,8 @@ class ReviewShow extends React.Component {
                         <div className='review-date'>{review.date}</div>
                         {this.props.currentUser && this.props.currentUser.id === review.userId && !this.state.editMode && (
                             <div className='review-icons'>
-                                <button onClick={() => this.editReview()}><FaEdit/></button> 
-                                <button onClick={(e) => this.deleteReview(e, review.id)}><FaTrashAlt /></button>
+                                <button onClick={() => this.editReview()}><FiEdit/></button> 
+                                <button onClick={(e) => this.deleteReview(e, review.id)}><FiTrash2 /></button>
                             </div>
                         )}
                     </div>
