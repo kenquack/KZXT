@@ -31,16 +31,33 @@ class ReviewForm extends React.Component {
             rating: this.state.rating 
         }
 
-        this.props.createReview(review);
+        this.props.createReview(review).then(
+            () => { this.setState({ errors: this.props.reviewErrors })}
+        )
         this.setState({
             body: '',
             rating: 1,
         })
     }
 
+    renderErrors() {
+        if (this.props.reviewErrors.length === 0) return;
+        return (
+            <ul className='review-form-error-list'>
+                {this.props.reviewErrors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
+
     render() {
+        console.log(this.props)
         return (
             <div className='rating-form'>
+                {this.renderErrors()}
                 <div className='rating-container'>
                     <span>Select Rating</span>                                       
                     <select onChange={this.changeRating} rating={this.state.rating} value={this.state.rating}>   

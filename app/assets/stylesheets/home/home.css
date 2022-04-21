@@ -1,8 +1,13 @@
+.home-body {
+    position: relative;
+    min-height: 100vh;
+}
+
 .intro {
     font-family: 'Gotham';
     position: absolute;
     /* background: yellow; */
-    top: 60vh;
+    top: 30%;
     left: 28vw;
     width: 40vw;
     height: 20vh;
@@ -73,9 +78,14 @@
     font-family: 'Gotham-Bold';
 }
 
+.body-container {
+    min-height: 100vh;
+    padding-bottom: 10vh;
+}
+
 .footer {
     position: absolute;
-    bottom: -135vh;
+    bottom: -80;
     background: rgb(26, 28, 30);
     width: 99.18vw;
     color: white;
@@ -108,4 +118,20 @@
 
 #intro-link:hover {
     background: rgba(242, 229, 229, 0.5);
+}
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.index-page {
+    padding-bottom: 10vh;
+}
+
+.show-page-container {
+    padding-bottom: 15vh;
 }

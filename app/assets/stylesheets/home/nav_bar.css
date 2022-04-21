@@ -130,7 +130,7 @@
 }
 
 .home-photo {
-    position: absolute;
+    position: relative;
     width: 100%;
 }
 

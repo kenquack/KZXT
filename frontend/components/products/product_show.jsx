@@ -49,7 +49,7 @@ class ProductShow extends React.Component {
         }
 
         return (
-            <div>
+            <div className='show-page-container'>
                 <div id='show-page'>
                     <img src={product.photoUrl} className='show-product-photo'/>
                     {/* <img src={window.catURL} className='show-product-photo'/> */}
@@ -78,7 +78,7 @@ class ProductShow extends React.Component {
                 </div>
                 <h2 className='review-header'>Customer Reviews</h2>
                 <ReviewIndexContainer product={product}/>
-                <ReviewForm openModal={this.props.openModal} currentUser={this.props.currentUser} product={this.props.product} createReview={this.props.createReview}/>
+                <ReviewForm openModal={this.props.openModal} currentUser={this.props.currentUser} product={this.props.product} createReview={this.props.createReview} reviewErrors={this.props.reviewErrors}/>
             </div>
         )
     }

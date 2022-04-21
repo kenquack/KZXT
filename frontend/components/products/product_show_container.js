@@ -9,10 +9,12 @@ const mapStateToProps = (state, {match}) => {
     const currentUser = state.entities.users[state.session.id]
     const product = state.entities.products[match.params.id]
     const cartItems = Object.values(state.entities.cartItems)
+    const reviewErrors = state.errors.review
     return {
         currentUser: currentUser,
         product: product,
-        cartItems: cartItems
+        cartItems: cartItems,
+        reviewErrors: reviewErrors,
     }
 }
 

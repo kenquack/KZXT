@@ -196,3 +196,13 @@
     border-radius: 10px;
     color: white;
 }
+
+#review-create > button:hover {
+    transform: scale(1.05);
+    background: rgb(88, 0, 252);
+}
+
+.review-form-error-list > li {
+    margin-bottom: 1vh;
+    font-family: 'Gotham';
+}

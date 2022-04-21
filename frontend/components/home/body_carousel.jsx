@@ -16,7 +16,7 @@ class Carousel extends React.Component {
         if (!this.props.products) return null;
 
         return (
-            <div>
+            <div className='body-container'>
                 <h2 id='body-header'>Shop Our Favorites</h2>
                 <div className='body-preview'>
                     {this.props.products.map((item) => {
