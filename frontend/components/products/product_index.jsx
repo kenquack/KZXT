@@ -5,12 +5,24 @@ import productLinks from './productLinks';
 class ProductIndex extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            products: this.props.products,
+        }
     }
 
     componentDidMount() {
         let filter = JSON.stringify(this.props.filter)
         this.props.updateFilter('category', JSON.parse(filter).category)
         window.addEventListener('scroll', this.handleScroll)
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.products.length === 0 && this.props.products.length !== 0) {
+            this.setState({
+                products: this.props.products
+            })
+        }
     }
 
     componentWillUnmount() {
@@ -63,7 +75,7 @@ class ProductIndex extends React.Component {
                     </div>              
                 </div>
                 <div className='index-container'>
-                    {this.props.products.map(product => {
+                    {this.state.products.map(product => {
                         return <ProductIndexItem product={product} key={product.id} />
                     })}
 
