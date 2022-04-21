@@ -138,5 +138,14 @@ peripheral2 = Product.create(
 file10 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Peripherals/boomarm.jpg")
 peripheral2.photo.attach(io:file10, filename:"boomarm")
 
+#keyboard
 
-cartItem1 = CartItem.create(user_id: 1, product_id: 3, quantity: 1)
+peripheral3 = Product.create(
+    name: 'Function MiniTKL',
+    description: 'The unique MiniTKL form factor impressively packs all 87 keys of a conventional tenkeyless keyboard into the smallest size possible—and even manages to squeeze in an extra dedicated macro key.',
+    category: 'Peripheral',
+    price: '99.99'
+)
+
+file11 = open("https://kzxt-seed.s3.us-west-1.amazonaws.com/Peripherals/keyboard.jpg")
+peripheral3.photo.attach(io:file11, filename:"keyboard")

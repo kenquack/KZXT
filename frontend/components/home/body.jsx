@@ -8,7 +8,7 @@ const Body = () => {
             <div className='intro'>
                 <h2>Function & Lift </h2>
                 <p>Introducing the KZXT Function Keyboard and Lift Mouse</p>
-                <Link to='/products/9' id='intro-link'>Start Clicking</Link>
+                <Link to='/products/11' id='intro-link'>Start Clicking</Link>
             </div>
             <img src={window.homePhotoURL} className="home-photo" />
             <Carousel />

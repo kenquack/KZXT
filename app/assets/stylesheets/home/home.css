@@ -41,7 +41,7 @@
     padding-right: 2vw;
 }
 
-.body-preview-item:first-child, .body-preview-item:nth-child(5) {
+.body-preview-item:first-child, .body-preview-item:nth-child(5), .body-preview-item:nth-child(10) {
     display: none;
 }
 
