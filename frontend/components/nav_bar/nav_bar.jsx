@@ -134,9 +134,9 @@ class NavBar extends React.Component {
                             <div id='logContent'>
                                 <img src={window.triangleURL}></img>
                                 <ul id='leftContent'>
-                                    <li><a href="https://github.com/kenquack" className='nav-social'>Github</a></li>
-                                    <li><a href="https://www.linkedin.com/in/kennethquach/" className='nav-social'>LinkedIn</a></li>
-                                    <li><a href="https://angel.co/u/kenneth-quach" className='nav-social'>AngelList</a></li>
+                                    <li><a href="https://github.com/kenquack" className='nav-social' target="_blank">Github</a></li>
+                                    <li><a href="https://www.linkedin.com/in/kennethquach/" className='nav-social' target="_blank">LinkedIn</a></li>
+                                    <li><a href="https://angel.co/u/kenneth-quach" className='nav-social' target="_blank">AngelList</a></li>
                                     <li>{signButton}</li>
                                 </ul>
                                 <div id='dropDes'>
@@ -149,8 +149,8 @@ class NavBar extends React.Component {
                         )}
                     </div>
                     <div className='socials'>
-                        <a href="https://github.com/kenquack"> <FiGithub /></a>
-                        <a href="https://www.linkedin.com/in/kennethquach/"> <FaLinkedin /></a>
+                        <a href="https://github.com/kenquack" target="_blank"> <FiGithub /></a>
+                        <a href="https://www.linkedin.com/in/kennethquach/" target="_blank"> <FaLinkedin /></a>
                     </div>
                     <span>{counter}</span>
                     {cartButton}

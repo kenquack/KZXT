@@ -50,7 +50,7 @@
 
 .signButton {
     color: white;
-    font-size: 1.3vh;
+    font-size: 1.5vh;
     /* margin-top: 0.8vh; */
     margin-left: 1.5vh;
     font-weight: bold;
@@ -79,8 +79,10 @@
 
 #leftContent > li {
     padding: 1vh;
+    padding-left: 1vw;
     text-decoration: none;
     color: white;
+    font-size: 1.5vh;
 }
 
 .nav-social {

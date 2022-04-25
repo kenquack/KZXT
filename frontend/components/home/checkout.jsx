@@ -11,8 +11,8 @@ class Checkout extends React.Component {
                     Thank you for checking out my website! <br/><br/>
                     Feel free to check out my social media to see other projects!
                 </p>
-                <a href="https://github.com/kenquack"> <FiGithub /></a>
-                <a href="https://www.linkedin.com/in/kennethquach/"> <FaLinkedin /></a>
+                <a href="https://github.com/kenquack" target="_blank"> <FiGithub /></a>
+                <a href="https://www.linkedin.com/in/kennethquach/" target="_blank"> <FaLinkedin /></a>
             </div>
             
         )
