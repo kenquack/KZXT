@@ -203,6 +203,10 @@ button:hover {
     text-decoration: none;
 }
 
+.resultProduct:hover {
+    background: rgb(243, 240, 240);
+}
+
 .resultProduct:first-child {
     border: none;
 }

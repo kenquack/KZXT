@@ -28,7 +28,7 @@ class SearchBar extends React.Component {
                 }
                 // to limit amount of AWS requests
                 // future feature, include button to lead user to page of results
-                if (filtered.length > 2) {
+                if (filtered.length > 3) {
                     break;
                 }
             };
