@@ -8,9 +8,7 @@ class NavBar extends React.Component {
     constructor(props) {
         super(props)
         this.logContainer = React.createRef();
-        // this.searchContainer = React.createRef(); this is for the drop down menu to work on specific columns
         this.state = {
-            // searchOpen: false,
             logOpen: false,
         };
 
@@ -35,12 +33,6 @@ class NavBar extends React.Component {
                 logOpen: false,
             });
         }
-
-        // if (this.searchContainer.current && !this.searchContainer.current.contains(event.target)){
-        //     this.setState({
-        //         searchOpen: false,
-        //     });
-        // }
     };
 
     handleClick(category) {
@@ -58,11 +50,6 @@ class NavBar extends React.Component {
     dropDown(input) {
 
         switch(input){
-            // case 'search':
-            //     this.setState({
-            //         searchOpen: true
-            //     })
-            //     break;
             case 'log':
                 this.setState({
                     logOpen: true
@@ -76,7 +63,6 @@ class NavBar extends React.Component {
     signOut() {
         this.props.logout()
         this.setState({
-            // searchOpen: false,
             logOpen: false,
         })
         setTimeout(
@@ -91,7 +77,6 @@ class NavBar extends React.Component {
     openModal(target) {
         this.props.openModal(target)
         this.setState({
-            // searchOpen: false,
             logOpen: false,
         })
     }
@@ -142,12 +127,6 @@ class NavBar extends React.Component {
                     </ul>
                     <div className='searchDrop'>
                         <button className='searchButton' onClick={() => this.openModal('search')}>< FiSearch size='2.5vh'/></button>
-                        {/* {this.state.searchOpen && (
-                            <div className='searchBar'>
-                                <span><FiSearch /></span>
-                                <input type="text" placeholder="Search KZXT.." autoFocus/>
-                            </div>
-                        )} */}
                     </div>
                     <div className='logDrop' ref={this.logContainer}>
                         <button className="loginButton" onClick={() => this.dropDown('log')}>< FiUser size='2.5vh'/></button>
