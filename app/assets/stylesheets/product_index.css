@@ -74,14 +74,19 @@ p[id='Gaming PC-message'] {
 /* body */
 
 .index-product-photo {
-    padding-left: 2vw;
+    padding-left: 1.5vw;
     width: 15vw;
     border: 1px solid rgb(221, 220, 231);
+    margin-bottom: 2vh;
+}
+
+.index-product-photo:hover {
+    border: 1px solid rgb(124, 123, 130);
 }
 
 .index-container {
     margin-top: 10vh;
-    margin-left: 42vw;
+    margin-left: 43vw;
     width: 50vw;
 }
 
