@@ -43,7 +43,7 @@ class ProductShow extends React.Component {
 
         let cartButton;
         if (!currentUser) {
-            cartButton = <button onClick={() => this.props.openModal('notLoggedIn')} id='addCart'>Add to Cart</button>
+            cartButton = <button onClick={() => this.props.openModal('login')} id='addCart'>Add to Cart</button>
         } else {
             cartButton = <button onClick={(e) => this.addToCart(e)} id='addCart'>Add to Cart</button>
         }

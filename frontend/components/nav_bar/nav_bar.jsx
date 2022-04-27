@@ -102,7 +102,7 @@ class NavBar extends React.Component {
             signButton = <button onClick={() => this.signOut()} className='signButton'>Sign Out</button>
         } else {
             signButton = <button onClick={() => this.openModal('login')} className='signButton'>Sign In</button>
-            cartButton = <button className='cartButton' onClick={() => this.openModal('notLoggedIn')}>< FiShoppingCart size='2.5vh'/></button>
+            cartButton = <button className='cartButton' onClick={() => this.openModal('login')}>< FiShoppingCart size='2.5vh'/></button>
         }
 
         return(
