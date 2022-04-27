@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_forms/login_form_container';
 import SignupFormContainer from '../session_forms/sign_up_form_container';
 import CartItemContainer from '../cart_items/cart_item_container';
-import LoggedIn from '../nav_bar/require_logged_in';
 import SearchBar from '../nav_bar/search_bar_container';
 
 function Modal({modal, closeModal}) {
@@ -21,9 +20,6 @@ function Modal({modal, closeModal}) {
       break;
     case 'cart':
       component = <CartItemContainer />;
-      break;
-    case 'notLoggedIn':
-      component = <LoggedIn />;
       break;
     case 'search':
       component = <SearchBar />;
