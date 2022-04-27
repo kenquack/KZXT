@@ -8,7 +8,7 @@ KZXT is a clone of NZXT that displays various products and allows users to navig
 
 ### Cart
 Users can add items to their cart while being able to adjust quantity in the cart itself, as well as being able to delete the cart item itself without having to decrease quantity to 0.
-![](https://user-images.githubusercontent.com/95385874/161307477-7bfcae96-28b1-4e22-bb71-347c860c9d14.gif)
+![](https://user-images.githubusercontent.com/95385874/165189766-74c7f6c5-9c10-4469-a747-68d7e86007c7.gif)
 
 ```
 adjustQuantity(type) {
@@ -29,7 +29,7 @@ adjustQuantity(type) {
 
 ### Search
 Users can search for items by their names or by the category that they fall under.
-![](https://user-images.githubusercontent.com/95385874/161308859-08357773-ef3f-413a-b54c-5c410bc097cb.gif)
+![](https://user-images.githubusercontent.com/95385874/165189703-a004482f-8740-42b9-bac8-6065d826d07f.gif)
 
 ```
   searchChange(e) {
